@@ -16,6 +16,11 @@
 		8AD606B22B2498850058E90A /* GitlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606B12B2498850058E90A /* GitlyTests.swift */; };
 		8AD606BC2B2498850058E90A /* GitlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606BB2B2498850058E90A /* GitlyUITests.swift */; };
 		8AD606BE2B2498850058E90A /* GitlyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606BD2B2498850058E90A /* GitlyUITestsLaunchTests.swift */; };
+		8AD606CC2B24A3A50058E90A /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606CB2B24A3A50058E90A /* Apollo */; };
+		8AD606CE2B24A3A50058E90A /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606CD2B24A3A50058E90A /* ApolloAPI */; };
+		8AD606D12B24A4030058E90A /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606D02B24A4030058E90A /* Collections */; };
+		8AD606D32B24A4030058E90A /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606D22B24A4030058E90A /* DequeModule */; };
+		8AD606D52B24A4030058E90A /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606D42B24A4030058E90A /* OrderedCollections */; };
 		A2701140A2AF6B7FFA541CE7 /* Pods_Gitly_GitlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210CED2A23F0504BE68C512C /* Pods_Gitly_GitlyUITests.framework */; };
 		F6226F9145D30974322F859D /* Pods_GitlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43455F0F74DC1272161D1B0 /* Pods_GitlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +70,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD606CE2B24A3A50058E90A /* ApolloAPI in Frameworks */,
 				2200E58F33C6A66D77870D0B /* Pods_Gitly.framework in Frameworks */,
+				8AD606D52B24A4030058E90A /* OrderedCollections in Frameworks */,
+				8AD606D32B24A4030058E90A /* DequeModule in Frameworks */,
+				8AD606D12B24A4030058E90A /* Collections in Frameworks */,
+				8AD606CC2B24A3A50058E90A /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +177,6 @@
 				072F92FCE0E0B2CD5E9F6C14 /* Pods-GitlyTests.debug.xcconfig */,
 				64C9E5E9B2BD5754FFDAFF68 /* Pods-GitlyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -189,6 +198,13 @@
 			dependencies = (
 			);
 			name = Gitly;
+			packageProductDependencies = (
+				8AD606CB2B24A3A50058E90A /* Apollo */,
+				8AD606CD2B24A3A50058E90A /* ApolloAPI */,
+				8AD606D02B24A4030058E90A /* Collections */,
+				8AD606D22B24A4030058E90A /* DequeModule */,
+				8AD606D42B24A4030058E90A /* OrderedCollections */,
+			);
 			productName = Gitly;
 			productReference = 8AD6069B2B2498840058E90A /* Gitly.app */;
 			productType = "com.apple.product-type.application";
@@ -264,6 +280,10 @@
 				Base,
 			);
 			mainGroup = 8AD606922B2498840058E90A;
+			packageReferences = (
+				8AD606CA2B24A3A50058E90A /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 8AD6069C2B2498840058E90A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -747,6 +767,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8AD606CA2B24A3A50058E90A /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
+		8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8AD606CB2B24A3A50058E90A /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AD606CA2B24A3A50058E90A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		8AD606CD2B24A3A50058E90A /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AD606CA2B24A3A50058E90A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		8AD606D02B24A4030058E90A /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		8AD606D22B24A4030058E90A /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		8AD606D42B24A4030058E90A /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8AD606932B2498840058E90A /* Project object */;
 }
