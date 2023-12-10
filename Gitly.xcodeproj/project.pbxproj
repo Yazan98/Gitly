@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2200E58F33C6A66D77870D0B /* Pods_Gitly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */; };
 		8A44AF442B264F7200B03DDD /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8A44AF432B264F7200B03DDD /* Apollo */; };
+		8A44AF482B26502100B03DDD /* PinnedRepositoriesQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8A44AF472B26502100B03DDD /* PinnedRepositoriesQuery.graphql */; };
 		8AD6069F2B2498840058E90A /* GitlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6069E2B2498840058E90A /* GitlyApp.swift */; };
 		8AD606A12B2498840058E90A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606A02B2498840058E90A /* ContentView.swift */; };
 		8AD606A52B2498850058E90A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD606A42B2498850058E90A /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		0EB5D44ABBA84CBE653311D9 /* Pods-Gitly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitly.release.xcconfig"; path = "Target Support Files/Pods-Gitly/Pods-Gitly.release.xcconfig"; sourceTree = "<group>"; };
 		389BE96631254637EC7F6588 /* Pods-Gitly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitly.debug.xcconfig"; path = "Target Support Files/Pods-Gitly/Pods-Gitly.debug.xcconfig"; sourceTree = "<group>"; };
+		8A44AF472B26502100B03DDD /* PinnedRepositoriesQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PinnedRepositoriesQuery.graphql; sourceTree = "<group>"; };
 		8AD6069B2B2498840058E90A /* Gitly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD6069E2B2498840058E90A /* GitlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyApp.swift; sourceTree = "<group>"; };
 		8AD606A02B2498840058E90A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,9 +84,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8A44AF462B264FFB00B03DDD /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				8A44AF472B26502100B03DDD /* PinnedRepositoriesQuery.graphql */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
 		8AD606922B2498840058E90A = {
 			isa = PBXGroup;
 			children = (
+				8AD606E32B24AA2C0058E90A /* schema.json */,
 				8AD6069D2B2498840058E90A /* Gitly */,
 				8AD6069C2B2498840058E90A /* Products */,
 				AFCD8E8F012B14EFCC460E27 /* Pods */,
@@ -105,7 +116,7 @@
 		8AD6069D2B2498840058E90A /* Gitly */ = {
 			isa = PBXGroup;
 			children = (
-				8AD606E32B24AA2C0058E90A /* schema.json */,
+				8A44AF462B264FFB00B03DDD /* Queries */,
 				8AD6069E2B2498840058E90A /* GitlyApp.swift */,
 				8AD606A02B2498840058E90A /* ContentView.swift */,
 				8AD606A42B2498850058E90A /* Assets.xcassets */,
@@ -242,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A44AF482B26502100B03DDD /* PinnedRepositoriesQuery.graphql in Resources */,
 				8AD606A82B2498850058E90A /* Preview Assets.xcassets in Resources */,
 				8AD606E42B24AA2C0058E90A /* schema.json in Resources */,
 				8AD606A52B2498850058E90A /* Assets.xcassets in Resources */,

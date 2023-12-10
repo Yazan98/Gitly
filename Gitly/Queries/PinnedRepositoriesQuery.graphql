@@ -1,11 +1,17 @@
-query PinnedReposQuery {
-    user(login: "GabrielBB") {
-      pinnedItems(first: 6, types: REPOSITORY) {
-        nodes {
-          ... on Repository {
-            name
-          }
+
+query PinnedRepositories($userName: String!) {
+  user(login: $userName) {
+    pinnedItems(first: 6, types: REPOSITORY) {
+      nodes {
+        ... on Repository {
+          name
+          id
+          description
+          updatedAt
+          stargazerCount
+          forkCount
         }
       }
     }
+  }
 }

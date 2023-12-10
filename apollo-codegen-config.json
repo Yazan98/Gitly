@@ -1,0 +1,30 @@
+{
+  "schemaNamespace" : "GithubGraphQlApi",
+  "input" : {
+    "operationSearchPaths" : [
+      "**/*.graphql",
+    ],
+    "schemaSearchPaths" : [
+      "**/*.graphqls",
+      "**/*.graphql",
+      "**/schema.json",
+    ]
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./GithubGraphQlApi",
+      "moduleType" : {
+        "swiftPackageManager" : {
+        }
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {
+      }
+    }
+  }
+}
