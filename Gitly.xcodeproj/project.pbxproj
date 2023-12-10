@@ -8,21 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2200E58F33C6A66D77870D0B /* Pods_Gitly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */; };
+		8A44AF442B264F7200B03DDD /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8A44AF432B264F7200B03DDD /* Apollo */; };
 		8AD6069F2B2498840058E90A /* GitlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6069E2B2498840058E90A /* GitlyApp.swift */; };
 		8AD606A12B2498840058E90A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606A02B2498840058E90A /* ContentView.swift */; };
-		8AD606A32B2498840058E90A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606A22B2498840058E90A /* Item.swift */; };
 		8AD606A52B2498850058E90A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD606A42B2498850058E90A /* Assets.xcassets */; };
 		8AD606A82B2498850058E90A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD606A72B2498850058E90A /* Preview Assets.xcassets */; };
-		8AD606B22B2498850058E90A /* GitlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606B12B2498850058E90A /* GitlyTests.swift */; };
-		8AD606BC2B2498850058E90A /* GitlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606BB2B2498850058E90A /* GitlyUITests.swift */; };
-		8AD606BE2B2498850058E90A /* GitlyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606BD2B2498850058E90A /* GitlyUITestsLaunchTests.swift */; };
-		8AD606CC2B24A3A50058E90A /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606CB2B24A3A50058E90A /* Apollo */; };
-		8AD606CE2B24A3A50058E90A /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606CD2B24A3A50058E90A /* ApolloAPI */; };
-		8AD606D12B24A4030058E90A /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606D02B24A4030058E90A /* Collections */; };
-		8AD606D32B24A4030058E90A /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606D22B24A4030058E90A /* DequeModule */; };
-		8AD606D52B24A4030058E90A /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD606D42B24A4030058E90A /* OrderedCollections */; };
-		A2701140A2AF6B7FFA541CE7 /* Pods_Gitly_GitlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210CED2A23F0504BE68C512C /* Pods_Gitly_GitlyUITests.framework */; };
-		F6226F9145D30974322F859D /* Pods_GitlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43455F0F74DC1272161D1B0 /* Pods_GitlyTests.framework */; };
+		8AD606E42B24AA2C0058E90A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AD606E32B24AA2C0058E90A /* schema.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,26 +34,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		072F92FCE0E0B2CD5E9F6C14 /* Pods-GitlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitlyTests.debug.xcconfig"; path = "Target Support Files/Pods-GitlyTests/Pods-GitlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0EB5D44ABBA84CBE653311D9 /* Pods-Gitly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitly.release.xcconfig"; path = "Target Support Files/Pods-Gitly/Pods-Gitly.release.xcconfig"; sourceTree = "<group>"; };
-		210CED2A23F0504BE68C512C /* Pods_Gitly_GitlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitly_GitlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		389BE96631254637EC7F6588 /* Pods-Gitly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitly.debug.xcconfig"; path = "Target Support Files/Pods-Gitly/Pods-Gitly.debug.xcconfig"; sourceTree = "<group>"; };
-		64C9E5E9B2BD5754FFDAFF68 /* Pods-GitlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitlyTests.release.xcconfig"; path = "Target Support Files/Pods-GitlyTests/Pods-GitlyTests.release.xcconfig"; sourceTree = "<group>"; };
-		81273616357760A483189F50 /* Pods-Gitly-GitlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitly-GitlyUITests.release.xcconfig"; path = "Target Support Files/Pods-Gitly-GitlyUITests/Pods-Gitly-GitlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8AD6069B2B2498840058E90A /* Gitly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD6069E2B2498840058E90A /* GitlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyApp.swift; sourceTree = "<group>"; };
 		8AD606A02B2498840058E90A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8AD606A22B2498840058E90A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8AD606A42B2498850058E90A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AD606A72B2498850058E90A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AD606AD2B2498850058E90A /* GitlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AD606B12B2498850058E90A /* GitlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyTests.swift; sourceTree = "<group>"; };
 		8AD606B72B2498850058E90A /* GitlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AD606BB2B2498850058E90A /* GitlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyUITests.swift; sourceTree = "<group>"; };
-		8AD606BD2B2498850058E90A /* GitlyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AD606E32B24AA2C0058E90A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B945EC2E8E4C3110AE5DE4F4 /* Pods-Gitly-GitlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitly-GitlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Gitly-GitlyUITests/Pods-Gitly-GitlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E43455F0F74DC1272161D1B0 /* Pods_GitlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD606CE2B24A3A50058E90A /* ApolloAPI in Frameworks */,
 				2200E58F33C6A66D77870D0B /* Pods_Gitly.framework in Frameworks */,
-				8AD606D52B24A4030058E90A /* OrderedCollections in Frameworks */,
-				8AD606D32B24A4030058E90A /* DequeModule in Frameworks */,
-				8AD606D12B24A4030058E90A /* Collections in Frameworks */,
-				8AD606CC2B24A3A50058E90A /* Apollo in Frameworks */,
+				8A44AF442B264F7200B03DDD /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6226F9145D30974322F859D /* Pods_GitlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2701140A2AF6B7FFA541CE7 /* Pods_Gitly_GitlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */,
-				210CED2A23F0504BE68C512C /* Pods_Gitly_GitlyUITests.framework */,
-				E43455F0F74DC1272161D1B0 /* Pods_GitlyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,8 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				8AD6069D2B2498840058E90A /* Gitly */,
-				8AD606B02B2498850058E90A /* GitlyTests */,
-				8AD606BA2B2498850058E90A /* GitlyUITests */,
 				8AD6069C2B2498840058E90A /* Products */,
 				AFCD8E8F012B14EFCC460E27 /* Pods */,
 				4E505737CE135EFADD2B1840 /* Frameworks */,
@@ -133,9 +105,9 @@
 		8AD6069D2B2498840058E90A /* Gitly */ = {
 			isa = PBXGroup;
 			children = (
+				8AD606E32B24AA2C0058E90A /* schema.json */,
 				8AD6069E2B2498840058E90A /* GitlyApp.swift */,
 				8AD606A02B2498840058E90A /* ContentView.swift */,
-				8AD606A22B2498840058E90A /* Item.swift */,
 				8AD606A42B2498850058E90A /* Assets.xcassets */,
 				8AD606A62B2498850058E90A /* Preview Content */,
 			);
@@ -150,32 +122,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8AD606B02B2498850058E90A /* GitlyTests */ = {
-			isa = PBXGroup;
-			children = (
-				8AD606B12B2498850058E90A /* GitlyTests.swift */,
-			);
-			path = GitlyTests;
-			sourceTree = "<group>";
-		};
-		8AD606BA2B2498850058E90A /* GitlyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8AD606BB2B2498850058E90A /* GitlyUITests.swift */,
-				8AD606BD2B2498850058E90A /* GitlyUITestsLaunchTests.swift */,
-			);
-			path = GitlyUITests;
-			sourceTree = "<group>";
-		};
 		AFCD8E8F012B14EFCC460E27 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				389BE96631254637EC7F6588 /* Pods-Gitly.debug.xcconfig */,
 				0EB5D44ABBA84CBE653311D9 /* Pods-Gitly.release.xcconfig */,
-				B945EC2E8E4C3110AE5DE4F4 /* Pods-Gitly-GitlyUITests.debug.xcconfig */,
-				81273616357760A483189F50 /* Pods-Gitly-GitlyUITests.release.xcconfig */,
-				072F92FCE0E0B2CD5E9F6C14 /* Pods-GitlyTests.debug.xcconfig */,
-				64C9E5E9B2BD5754FFDAFF68 /* Pods-GitlyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -191,7 +142,6 @@
 				8AD606972B2498840058E90A /* Sources */,
 				8AD606982B2498840058E90A /* Frameworks */,
 				8AD606992B2498840058E90A /* Resources */,
-				C9F6AE62F15071BB5BB778D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,11 +149,7 @@
 			);
 			name = Gitly;
 			packageProductDependencies = (
-				8AD606CB2B24A3A50058E90A /* Apollo */,
-				8AD606CD2B24A3A50058E90A /* ApolloAPI */,
-				8AD606D02B24A4030058E90A /* Collections */,
-				8AD606D22B24A4030058E90A /* DequeModule */,
-				8AD606D42B24A4030058E90A /* OrderedCollections */,
+				8A44AF432B264F7200B03DDD /* Apollo */,
 			);
 			productName = Gitly;
 			productReference = 8AD6069B2B2498840058E90A /* Gitly.app */;
@@ -213,7 +159,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AD606C42B2498850058E90A /* Build configuration list for PBXNativeTarget "GitlyTests" */;
 			buildPhases = (
-				5DD0551514D730C0C75B89D9 /* [CP] Check Pods Manifest.lock */,
 				8AD606A92B2498850058E90A /* Sources */,
 				8AD606AA2B2498850058E90A /* Frameworks */,
 				8AD606AB2B2498850058E90A /* Resources */,
@@ -232,11 +177,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AD606C72B2498850058E90A /* Build configuration list for PBXNativeTarget "GitlyUITests" */;
 			buildPhases = (
-				837A2C217ED43A493A96ED1D /* [CP] Check Pods Manifest.lock */,
 				8AD606B32B2498850058E90A /* Sources */,
 				8AD606B42B2498850058E90A /* Frameworks */,
 				8AD606B52B2498850058E90A /* Resources */,
-				8A1EF60457BC3A01AF206A85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,8 +224,7 @@
 			);
 			mainGroup = 8AD606922B2498840058E90A;
 			packageReferences = (
-				8AD606CA2B24A3A50058E90A /* XCRemoteSwiftPackageReference "apollo-ios" */,
-				8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */,
+				8A6711F62B263D2B006D4698 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 8AD6069C2B2498840058E90A /* Products */;
 			projectDirPath = "";
@@ -301,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD606A82B2498850058E90A /* Preview Assets.xcassets in Resources */,
+				8AD606E42B24AA2C0058E90A /* schema.json in Resources */,
 				8AD606A52B2498850058E90A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,84 +265,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5DD0551514D730C0C75B89D9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GitlyTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		837A2C217ED43A493A96ED1D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Gitly-GitlyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8A1EF60457BC3A01AF206A85 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gitly-GitlyUITests/Pods-Gitly-GitlyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gitly-GitlyUITests/Pods-Gitly-GitlyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gitly-GitlyUITests/Pods-Gitly-GitlyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9F6AE62F15071BB5BB778D2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gitly/Pods-Gitly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gitly/Pods-Gitly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gitly/Pods-Gitly-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FC2ECEB398B6324DE066A84B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD606A12B2498840058E90A /* ContentView.swift in Sources */,
-				8AD606A32B2498840058E90A /* Item.swift in Sources */,
 				8AD6069F2B2498840058E90A /* GitlyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD606B22B2498850058E90A /* GitlyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +310,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD606BE2B2498850058E90A /* GitlyUITestsLaunchTests.swift in Sources */,
-				8AD606BC2B2498850058E90A /* GitlyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +465,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,9 +473,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yazantarifi.Gitly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -634,6 +499,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,15 +507,17 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yazantarifi.Gitly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		8AD606C52B2498850058E90A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 072F92FCE0E0B2CD5E9F6C14 /* Pods-GitlyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -670,7 +538,6 @@
 		};
 		8AD606C62B2498850058E90A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64C9E5E9B2BD5754FFDAFF68 /* Pods-GitlyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -691,7 +558,6 @@
 		};
 		8AD606C82B2498850058E90A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B945EC2E8E4C3110AE5DE4F4 /* Pods-Gitly-GitlyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -710,7 +576,6 @@
 		};
 		8AD606C92B2498850058E90A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81273616357760A483189F50 /* Pods-Gitly-GitlyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -769,7 +634,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8AD606CA2B24A3A50058E90A /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+		8A6711F62B263D2B006D4698 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
 			requirement = {
@@ -777,41 +642,13 @@
 				minimumVersion = 1.7.1;
 			};
 		};
-		8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-collections.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.5;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8AD606CB2B24A3A50058E90A /* Apollo */ = {
+		8A44AF432B264F7200B03DDD /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8AD606CA2B24A3A50058E90A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			package = 8A6711F62B263D2B006D4698 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
-		};
-		8AD606CD2B24A3A50058E90A /* ApolloAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AD606CA2B24A3A50058E90A /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloAPI;
-		};
-		8AD606D02B24A4030058E90A /* Collections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = Collections;
-		};
-		8AD606D22B24A4030058E90A /* DequeModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = DequeModule;
-		};
-		8AD606D42B24A4030058E90A /* OrderedCollections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AD606CF2B24A4030058E90A /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = OrderedCollections;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
