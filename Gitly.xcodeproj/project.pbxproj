@@ -10,11 +10,15 @@
 		2200E58F33C6A66D77870D0B /* Pods_Gitly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */; };
 		8A44AF442B264F7200B03DDD /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8A44AF432B264F7200B03DDD /* Apollo */; };
 		8A44AF482B26502100B03DDD /* PinnedRepositoriesQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8A44AF472B26502100B03DDD /* PinnedRepositoriesQuery.graphql */; };
+		8ACEDB3D2B26597B002B573D /* GithubGraphQlApi in Frameworks */ = {isa = PBXBuildFile; productRef = 8ACEDB3C2B26597B002B573D /* GithubGraphQlApi */; };
 		8AD6069F2B2498840058E90A /* GitlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6069E2B2498840058E90A /* GitlyApp.swift */; };
-		8AD606A12B2498840058E90A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606A02B2498840058E90A /* ContentView.swift */; };
+		8AD606A12B2498840058E90A /* OnBoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD606A02B2498840058E90A /* OnBoardingScreen.swift */; };
 		8AD606A52B2498850058E90A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD606A42B2498850058E90A /* Assets.xcassets */; };
 		8AD606A82B2498850058E90A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD606A72B2498850058E90A /* Preview Assets.xcassets */; };
 		8AD606E42B24AA2C0058E90A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AD606E32B24AA2C0058E90A /* schema.json */; };
+		8AEF3C052B265B0F005517AC /* GitlyApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */; };
+		8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */; };
+		8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C0C2B266448005517AC /* LoginScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +42,18 @@
 		0EB5D44ABBA84CBE653311D9 /* Pods-Gitly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitly.release.xcconfig"; path = "Target Support Files/Pods-Gitly/Pods-Gitly.release.xcconfig"; sourceTree = "<group>"; };
 		389BE96631254637EC7F6588 /* Pods-Gitly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitly.debug.xcconfig"; path = "Target Support Files/Pods-Gitly/Pods-Gitly.debug.xcconfig"; sourceTree = "<group>"; };
 		8A44AF472B26502100B03DDD /* PinnedRepositoriesQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PinnedRepositoriesQuery.graphql; sourceTree = "<group>"; };
+		8ACEDB3B2B265967002B573D /* GithubGraphQlApi */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GithubGraphQlApi; sourceTree = "<group>"; };
 		8AD6069B2B2498840058E90A /* Gitly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD6069E2B2498840058E90A /* GitlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyApp.swift; sourceTree = "<group>"; };
-		8AD606A02B2498840058E90A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8AD606A02B2498840058E90A /* OnBoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreen.swift; sourceTree = "<group>"; };
 		8AD606A42B2498850058E90A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AD606A72B2498850058E90A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AD606AD2B2498850058E90A /* GitlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD606B72B2498850058E90A /* GitlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD606E32B24AA2C0058E90A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyApiManager.swift; sourceTree = "<group>"; };
+		8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyStorageKeysManager.swift; sourceTree = "<group>"; };
+		8AEF3C0C2B266448005517AC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,6 +64,7 @@
 			files = (
 				2200E58F33C6A66D77870D0B /* Pods_Gitly.framework in Frameworks */,
 				8A44AF442B264F7200B03DDD /* Apollo in Frameworks */,
+				8ACEDB3D2B26597B002B573D /* GithubGraphQlApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +88,7 @@
 		4E505737CE135EFADD2B1840 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8ACEDB3B2B265967002B573D /* GithubGraphQlApi */,
 				AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */,
 			);
 			name = Frameworks;
@@ -116,9 +126,11 @@
 		8AD6069D2B2498840058E90A /* Gitly */ = {
 			isa = PBXGroup;
 			children = (
+				8AEF3C032B265AD5005517AC /* Screens */,
+				8AEF3C022B265ACD005517AC /* Views */,
+				8AEF3C012B265ABF005517AC /* Data */,
 				8A44AF462B264FFB00B03DDD /* Queries */,
 				8AD6069E2B2498840058E90A /* GitlyApp.swift */,
-				8AD606A02B2498840058E90A /* ContentView.swift */,
 				8AD606A42B2498850058E90A /* Assets.xcassets */,
 				8AD606A62B2498850058E90A /* Preview Content */,
 			);
@@ -131,6 +143,47 @@
 				8AD606A72B2498850058E90A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8AEF3C012B265ABF005517AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3C072B265B2A005517AC /* StorageImplementation */,
+				8AEF3C062B265B1F005517AC /* QueriesImplementation */,
+				8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8AEF3C022B265ACD005517AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8AEF3C032B265AD5005517AC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8AD606A02B2498840058E90A /* OnBoardingScreen.swift */,
+				8AEF3C0C2B266448005517AC /* LoginScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8AEF3C062B265B1F005517AC /* QueriesImplementation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QueriesImplementation;
+			sourceTree = "<group>";
+		};
+		8AEF3C072B265B2A005517AC /* StorageImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */,
+			);
+			path = StorageImplementation;
 			sourceTree = "<group>";
 		};
 		AFCD8E8F012B14EFCC460E27 /* Pods */ = {
@@ -161,6 +214,7 @@
 			name = Gitly;
 			packageProductDependencies = (
 				8A44AF432B264F7200B03DDD /* Apollo */,
+				8ACEDB3C2B26597B002B573D /* GithubGraphQlApi */,
 			);
 			productName = Gitly;
 			productReference = 8AD6069B2B2498840058E90A /* Gitly.app */;
@@ -306,8 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD606A12B2498840058E90A /* ContentView.swift in Sources */,
+				8AEF3C052B265B0F005517AC /* GitlyApiManager.swift in Sources */,
+				8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */,
+				8AD606A12B2498840058E90A /* OnBoardingScreen.swift in Sources */,
 				8AD6069F2B2498840058E90A /* GitlyApp.swift in Sources */,
+				8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +718,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8A6711F62B263D2B006D4698 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		8ACEDB3C2B26597B002B573D /* GithubGraphQlApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GithubGraphQlApi;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

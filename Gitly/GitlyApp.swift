@@ -11,9 +11,18 @@ import SwiftData
 @main
 struct GitlyApp: App {
     
+    @State var onNavigationDirectly = false
+    let isUserLoggedIn = GitlyStorageKeysManager.shared.isUserLoggedIn()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                if isUserLoggedIn {
+                    LoginScreen()
+                } else {
+                    OnBoardingScreen(onLoginScreenDirection: $onNavigationDirectly)
+                }
+            }
         }
     }
 }
