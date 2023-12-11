@@ -42,32 +42,36 @@ public final class AuthViewModel: ObservableObject {
         
         self.loginLoadingState = true
         GitlyStorageKeysManager.shared.onInsertLoginInformation(username: userNameField, token: passwordField)
-        DispatchQueue.global(qos: .background).async {
-            self.userRepositoryQueriesImplementation.getUserInformationByUserName(onAccountResult: { logginInUser in
-                self.loginLoadingState = false
-                self.isErrorBannerShown = false
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            self?.userRepositoryQueriesImplementation.getUserInformationByUserName(onAccountResult: { logginInUser in
+                DispatchQueue.main.async {
+                    self?.loginLoadingState = false
+                    self?.isErrorBannerShown = false
 
-                self.errorMessageContent = BannerData(
-                    title: "Welcome Mr. \(logginInUser.name ?? "") To Gitly",
-                    detail: "You can now Access All Gitly Functions With Your Personal Account",
-                    type: .success
-                )
-                
-                self.isErrorBannerShown = true
-                
-                DispatchQueue.global().asyncAfter(deadline: .now() + 4.0) {
-                    self.isUserLoggedInState = true
+                    self?.errorMessageContent = BannerData(
+                        title: "Welcome Mr. \(logginInUser.name ?? "") To Gitly",
+                        detail: "You can now Access All Gitly Functions With Your Personal Account",
+                        type: .success
+                    )
+                    
+                    self?.isErrorBannerShown = true
+                    
+                    DispatchQueue.global().asyncAfter(deadline: .now() + 4.0) { [weak self] in
+                        self?.isUserLoggedInState = true
+                    }
                 }
             }, onAccountInvalid: {
-                self.loginLoadingState = false
-                self.isErrorBannerShown = false
-                self.errorMessageContent = BannerData(
-                    title: "Account Not Found!",
-                    detail: "Make Sure to Provide A Valid Information Before Continue",
-                    type: .error
-                )
-                
-                self.isErrorBannerShown = true
+                DispatchQueue.main.async {
+                    self?.loginLoadingState = false
+                    self?.isErrorBannerShown = false
+                    self?.errorMessageContent = BannerData(
+                        title: "Account Not Found!",
+                        detail: "Make Sure to Provide A Valid Information Before Continue",
+                        type: .error
+                    )
+                    
+                    self?.isErrorBannerShown = true
+                }
             })
         }
     }

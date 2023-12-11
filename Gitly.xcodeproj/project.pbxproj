@@ -26,6 +26,14 @@
 		8AEF3C182B26D728005517AC /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C172B26D728005517AC /* HomeScreen.swift */; };
 		8AEF3C1A2B26D957005517AC /* GitlyScreenNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C192B26D957005517AC /* GitlyScreenNavigationView.swift */; };
 		8AEF3C1D2B26D973005517AC /* GitlyScreenNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C1C2B26D973005517AC /* GitlyScreenNavigationItem.swift */; };
+		8AEF3C212B26E542005517AC /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C202B26E542005517AC /* HomeTabView.swift */; };
+		8AEF3C232B26E54C005517AC /* NotificationsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C222B26E54C005517AC /* NotificationsTabView.swift */; };
+		8AEF3C252B26E556005517AC /* ExploreTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C242B26E556005517AC /* ExploreTabView.swift */; };
+		8AEF3C272B26E560005517AC /* ProfileTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C262B26E560005517AC /* ProfileTabView.swift */; };
+		8AEF3C292B26E78C005517AC /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C282B26E78C005517AC /* HomeScreenViewModel.swift */; };
+		8AEF3C2B2B26E797005517AC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C2A2B26E797005517AC /* ProfileViewModel.swift */; };
+		8AEF3C2D2B26E7E0005517AC /* ProfileScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C2C2B26E7E0005517AC /* ProfileScreenItem.swift */; };
+		8AEF3C2F2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C2E2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +76,14 @@
 		8AEF3C172B26D728005517AC /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		8AEF3C192B26D957005517AC /* GitlyScreenNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyScreenNavigationView.swift; sourceTree = "<group>"; };
 		8AEF3C1C2B26D973005517AC /* GitlyScreenNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyScreenNavigationItem.swift; sourceTree = "<group>"; };
+		8AEF3C202B26E542005517AC /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		8AEF3C222B26E54C005517AC /* NotificationsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTabView.swift; sourceTree = "<group>"; };
+		8AEF3C242B26E556005517AC /* ExploreTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTabView.swift; sourceTree = "<group>"; };
+		8AEF3C262B26E560005517AC /* ProfileTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabView.swift; sourceTree = "<group>"; };
+		8AEF3C282B26E78C005517AC /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		8AEF3C2A2B26E797005517AC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		8AEF3C2C2B26E7E0005517AC /* ProfileScreenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenItem.swift; sourceTree = "<group>"; };
+		8AEF3C2E2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyRepositoriesQueriesImplementation.swift; sourceTree = "<group>"; };
 		AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +157,7 @@
 		8AD6069D2B2498840058E90A /* Gitly */ = {
 			isa = PBXGroup;
 			children = (
+				8AEF3C1E2B26E50C005517AC /* Features */,
 				8AEF3C102B26CC58005517AC /* ViewModels */,
 				8AEF3C032B265AD5005517AC /* Screens */,
 				8AEF3C022B265ACD005517AC /* Views */,
@@ -195,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				8AEF3C132B26CC87005517AC /* GitlyUserQueriesImplementation.swift */,
+				8AEF3C2E2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift */,
 			);
 			path = QueriesImplementation;
 			sourceTree = "<group>";
@@ -211,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				8AEF3C112B26CC66005517AC /* AuthViewModel.swift */,
+				8AEF3C282B26E78C005517AC /* HomeScreenViewModel.swift */,
+				8AEF3C2A2B26E797005517AC /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -219,8 +239,28 @@
 			isa = PBXGroup;
 			children = (
 				8AEF3C1C2B26D973005517AC /* GitlyScreenNavigationItem.swift */,
+				8AEF3C2C2B26E7E0005517AC /* ProfileScreenItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8AEF3C1E2B26E50C005517AC /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3C1F2B26E512005517AC /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8AEF3C1F2B26E512005517AC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3C202B26E542005517AC /* HomeTabView.swift */,
+				8AEF3C222B26E54C005517AC /* NotificationsTabView.swift */,
+				8AEF3C242B26E556005517AC /* ExploreTabView.swift */,
+				8AEF3C262B26E560005517AC /* ProfileTabView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		AFCD8E8F012B14EFCC460E27 /* Pods */ = {
@@ -398,14 +438,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEF3C2D2B26E7E0005517AC /* ProfileScreenItem.swift in Sources */,
 				8AEF3C052B265B0F005517AC /* GitlyApiManager.swift in Sources */,
+				8AEF3C272B26E560005517AC /* ProfileTabView.swift in Sources */,
 				8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */,
+				8AEF3C252B26E556005517AC /* ExploreTabView.swift in Sources */,
 				8AEF3C122B26CC66005517AC /* AuthViewModel.swift in Sources */,
+				8AEF3C212B26E542005517AC /* HomeTabView.swift in Sources */,
 				8AD606A12B2498840058E90A /* OnBoardingScreen.swift in Sources */,
+				8AEF3C232B26E54C005517AC /* NotificationsTabView.swift in Sources */,
 				8AEF3C162B26CEC1005517AC /* BannerModifier.swift in Sources */,
+				8AEF3C292B26E78C005517AC /* HomeScreenViewModel.swift in Sources */,
 				8AEF3C182B26D728005517AC /* HomeScreen.swift in Sources */,
 				8AEF3C1A2B26D957005517AC /* GitlyScreenNavigationView.swift in Sources */,
 				8AEF3C1D2B26D973005517AC /* GitlyScreenNavigationItem.swift in Sources */,
+				8AEF3C2F2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift in Sources */,
+				8AEF3C2B2B26E797005517AC /* ProfileViewModel.swift in Sources */,
 				8AEF3C142B26CC87005517AC /* GitlyUserQueriesImplementation.swift in Sources */,
 				8AD6069F2B2498840058E90A /* GitlyApp.swift in Sources */,
 				8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */,

@@ -15,6 +15,9 @@ query GetUserInformationByUserName($userName: String!) {
         following {
             totalCount
         }
+        repositories {
+            totalCount
+        }
         hasSponsorsListing
         isGitHubStar
         location

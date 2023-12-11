@@ -7,7 +7,7 @@ public class GetUserInformationByUserNameQuery: GraphQLQuery {
   public static let operationName: String = "GetUserInformationByUserName"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query GetUserInformationByUserName($userName: String!) { user(login: $userName) { __typename login name bio organizations(first: 100) { __typename totalCount } avatarUrl(size: 50) company createdAt followers { __typename totalCount } following { __typename totalCount } hasSponsorsListing isGitHubStar location starredRepositories { __typename isOverLimit totalCount } status { __typename createdAt emoji emojiHTML expiresAt id indicatesLimitedAvailability message updatedAt } twitterUsername websiteUrl email isCampusExpert isDeveloperProgramMember updatedAt url viewerIsFollowing viewerCanFollow } }"#
+      #"query GetUserInformationByUserName($userName: String!) { user(login: $userName) { __typename login name bio organizations(first: 100) { __typename totalCount } avatarUrl(size: 50) company createdAt followers { __typename totalCount } following { __typename totalCount } repositories { __typename totalCount } hasSponsorsListing isGitHubStar location starredRepositories { __typename isOverLimit totalCount } status { __typename createdAt emoji emojiHTML expiresAt id indicatesLimitedAvailability message updatedAt } twitterUsername websiteUrl email isCampusExpert isDeveloperProgramMember updatedAt url viewerIsFollowing viewerCanFollow } }"#
     ))
 
   public var userName: String
@@ -49,6 +49,7 @@ public class GetUserInformationByUserNameQuery: GraphQLQuery {
         .field("createdAt", GithubGraphQlApi.DateTime.self),
         .field("followers", Followers.self),
         .field("following", Following.self),
+        .field("repositories", Repositories.self),
         .field("hasSponsorsListing", Bool.self),
         .field("isGitHubStar", Bool.self),
         .field("location", String?.self),
@@ -83,6 +84,8 @@ public class GetUserInformationByUserNameQuery: GraphQLQuery {
       public var followers: Followers { __data["followers"] }
       /// A list of users the given user is following.
       public var following: Following { __data["following"] }
+      /// A list of repositories that the user owns.
+      public var repositories: Repositories { __data["repositories"] }
       /// True if this user/organization has a GitHub Sponsors listing.
       public var hasSponsorsListing: Bool { __data["hasSponsorsListing"] }
       /// Whether or not this user is a member of the GitHub Stars Program.
@@ -154,6 +157,23 @@ public class GetUserInformationByUserNameQuery: GraphQLQuery {
         public init(_dataDict: DataDict) { __data = _dataDict }
 
         public static var __parentType: ApolloAPI.ParentType { GithubGraphQlApi.Objects.FollowingConnection }
+        public static var __selections: [ApolloAPI.Selection] { [
+          .field("__typename", String.self),
+          .field("totalCount", Int.self),
+        ] }
+
+        /// Identifies the total count of items in the connection.
+        public var totalCount: Int { __data["totalCount"] }
+      }
+
+      /// User.Repositories
+      ///
+      /// Parent Type: `RepositoryConnection`
+      public struct Repositories: GithubGraphQlApi.SelectionSet {
+        public let __data: DataDict
+        public init(_dataDict: DataDict) { __data = _dataDict }
+
+        public static var __parentType: ApolloAPI.ParentType { GithubGraphQlApi.Objects.RepositoryConnection }
         public static var __selections: [ApolloAPI.Selection] { [
           .field("__typename", String.self),
           .field("totalCount", Int.self),

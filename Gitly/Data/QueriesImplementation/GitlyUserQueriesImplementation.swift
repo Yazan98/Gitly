@@ -13,11 +13,17 @@ protocol GitlyUserQueriesImplementationDescription {
         onAccountResult:  @escaping (GithubGraphQlApi.GetUserInformationByUserNameQuery.Data.User) -> Void,
         onAccountInvalid:  @escaping  () -> Void
     )
+    
+    func getCurrentLoggedInUserInformation(onAccountResult:  @escaping (ProfileScreenHeader) -> Void)
 }
 
 public final class GitlyUserQueriesImplementation: GitlyUserQueriesImplementationDescription {
     
-    func getUserInformationByUserName(onAccountResult:  @escaping (GithubGraphQlApi.GetUserInformationByUserNameQuery.Data.User) -> Void, onAccountInvalid:  @escaping () -> Void) {
+    
+    func getUserInformationByUserName(
+        onAccountResult:  @escaping (GithubGraphQlApi.GetUserInformationByUserNameQuery.Data.User) -> Void,
+        onAccountInvalid:  @escaping () -> Void
+    ) {
         let userName = GitlyStorageKeysManager.shared.getUserNameValue()
         GitlyApiManager.shared.getApiInstance().fetch(
             query: GetUserInformationByUserNameQuery(userName: userName)
@@ -34,8 +40,39 @@ public final class GitlyUserQueriesImplementation: GitlyUserQueriesImplementatio
                 return
             }
             
-            print("Login Response :: \(userInfo)")
             onAccountResult(userInfo)
+        }
+    }
+    
+    func getCurrentLoggedInUserInformation(
+        onAccountResult:  @escaping (ProfileScreenHeader) -> Void
+    ) {
+        DispatchQueue.global(qos: .background).async {
+            let userName = GitlyStorageKeysManager.shared.getUserNameValue()
+            GitlyApiManager.shared.getApiInstance().fetch(
+                query: GetUserInformationByUserNameQuery(userName: userName)
+            ) { result in
+                guard let data = try? result.get().data else { return }
+                guard let userInfo = data.user else { return }
+                
+                let profileHeader = ProfileScreenHeader(
+                    name: userInfo.name ?? "",
+                    bio: userInfo.bio ?? "",
+                    id: userInfo.login,
+                    status: userInfo.status?.message ?? "",
+                    image: userInfo.avatarUrl,
+                    location: userInfo.location ?? "",
+                    website: userInfo.websiteUrl ?? "",
+                    isGithubDeveloperProgramEnabled: userInfo.isDeveloperProgramMember,
+                    followersCount: userInfo.followers.totalCount ,
+                    followingsCount: userInfo.following.totalCount,
+                    starredRepositoriesCount: userInfo.starredRepositories.totalCount,
+                    repositoriesCount: userInfo.repositories.totalCount,
+                    organizationsCount: userInfo.organizations.totalCount
+                )
+                
+                onAccountResult(profileHeader)
+            }
         }
     }
     
