@@ -36,6 +36,15 @@
 		8AEF3C2F2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C2E2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift */; };
 		8AEF3C312B26F849005517AC /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C302B26F849005517AC /* ProfileViewCell.swift */; };
 		8AEF3C332B26FC55005517AC /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C322B26FC55005517AC /* ImageView.swift */; };
+		8AEF3C352B2790EC005517AC /* FollowingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C342B2790EC005517AC /* FollowingsScreen.swift */; };
+		8AEF3C372B279104005517AC /* FollowingsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C362B279104005517AC /* FollowingsType.swift */; };
+		8AEF3C392B279132005517AC /* FollowingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C382B279132005517AC /* FollowingsViewModel.swift */; };
+		8AEF3C3B2B27914C005517AC /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C3A2B27914C005517AC /* UserEntity.swift */; };
+		8AEF3C3D2B2791EE005517AC /* GetFollowersByUserNameQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3C3C2B2791EE005517AC /* GetFollowersByUserNameQuery.graphql */; };
+		8AEF3C3F2B279308005517AC /* GetFollowingsByUserNameQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3C3E2B279308005517AC /* GetFollowingsByUserNameQuery.graphql */; };
+		8AEF3C442B279C55005517AC /* GetFollowersFirstPageQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3C432B279C55005517AC /* GetFollowersFirstPageQuery.graphql */; };
+		8AEF3C462B279CE4005517AC /* GetFollowingsFirstPageQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3C452B279CE4005517AC /* GetFollowingsFirstPageQuery.graphql */; };
+		8AEF3C492B279F42005517AC /* UsersScreenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C482B279F42005517AC /* UsersScreenListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +97,15 @@
 		8AEF3C2E2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyRepositoriesQueriesImplementation.swift; sourceTree = "<group>"; };
 		8AEF3C302B26F849005517AC /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		8AEF3C322B26FC55005517AC /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		8AEF3C342B2790EC005517AC /* FollowingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingsScreen.swift; sourceTree = "<group>"; };
+		8AEF3C362B279104005517AC /* FollowingsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingsType.swift; sourceTree = "<group>"; };
+		8AEF3C382B279132005517AC /* FollowingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingsViewModel.swift; sourceTree = "<group>"; };
+		8AEF3C3A2B27914C005517AC /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		8AEF3C3C2B2791EE005517AC /* GetFollowersByUserNameQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetFollowersByUserNameQuery.graphql; sourceTree = "<group>"; };
+		8AEF3C3E2B279308005517AC /* GetFollowingsByUserNameQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetFollowingsByUserNameQuery.graphql; sourceTree = "<group>"; };
+		8AEF3C432B279C55005517AC /* GetFollowersFirstPageQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetFollowersFirstPageQuery.graphql; sourceTree = "<group>"; };
+		8AEF3C452B279CE4005517AC /* GetFollowingsFirstPageQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetFollowingsFirstPageQuery.graphql; sourceTree = "<group>"; };
+		8AEF3C482B279F42005517AC /* UsersScreenListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersScreenListView.swift; sourceTree = "<group>"; };
 		AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +151,10 @@
 			children = (
 				8A44AF472B26502100B03DDD /* PinnedRepositoriesQuery.graphql */,
 				8AEF3C0E2B26CC33005517AC /* GetUserInformationByUserNameQuery.graphql */,
+				8AEF3C3C2B2791EE005517AC /* GetFollowersByUserNameQuery.graphql */,
+				8AEF3C3E2B279308005517AC /* GetFollowingsByUserNameQuery.graphql */,
+				8AEF3C432B279C55005517AC /* GetFollowersFirstPageQuery.graphql */,
+				8AEF3C452B279CE4005517AC /* GetFollowingsFirstPageQuery.graphql */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -210,6 +232,7 @@
 				8AEF3C0C2B266448005517AC /* LoginScreen.swift */,
 				8AEF3C172B26D728005517AC /* HomeScreen.swift */,
 				8AEF3C192B26D957005517AC /* GitlyScreenNavigationView.swift */,
+				8AEF3C342B2790EC005517AC /* FollowingsScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -237,6 +260,7 @@
 				8AEF3C112B26CC66005517AC /* AuthViewModel.swift */,
 				8AEF3C282B26E78C005517AC /* HomeScreenViewModel.swift */,
 				8AEF3C2A2B26E797005517AC /* ProfileViewModel.swift */,
+				8AEF3C382B279132005517AC /* FollowingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -246,6 +270,8 @@
 			children = (
 				8AEF3C1C2B26D973005517AC /* GitlyScreenNavigationItem.swift */,
 				8AEF3C2C2B26E7E0005517AC /* ProfileScreenItem.swift */,
+				8AEF3C362B279104005517AC /* FollowingsType.swift */,
+				8AEF3C3A2B27914C005517AC /* UserEntity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +279,7 @@
 		8AEF3C1E2B26E50C005517AC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8AEF3C472B279F28005517AC /* Users */,
 				8AEF3C1F2B26E512005517AC /* Home */,
 			);
 			path = Features;
@@ -267,6 +294,14 @@
 				8AEF3C262B26E560005517AC /* ProfileTabView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8AEF3C472B279F28005517AC /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3C482B279F42005517AC /* UsersScreenListView.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		AFCD8E8F012B14EFCC460E27 /* Pods */ = {
@@ -390,10 +425,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEF3C3D2B2791EE005517AC /* GetFollowersByUserNameQuery.graphql in Resources */,
+				8AEF3C3F2B279308005517AC /* GetFollowingsByUserNameQuery.graphql in Resources */,
+				8AEF3C442B279C55005517AC /* GetFollowersFirstPageQuery.graphql in Resources */,
 				8A44AF482B26502100B03DDD /* PinnedRepositoriesQuery.graphql in Resources */,
 				8AD606A82B2498850058E90A /* Preview Assets.xcassets in Resources */,
 				8AD606E42B24AA2C0058E90A /* schema.json in Resources */,
 				8AD606A52B2498850058E90A /* Assets.xcassets in Resources */,
+				8AEF3C462B279CE4005517AC /* GetFollowingsFirstPageQuery.graphql in Resources */,
 				8AEF3C0F2B26CC33005517AC /* GetUserInformationByUserNameQuery.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,13 +487,16 @@
 				8AEF3C052B265B0F005517AC /* GitlyApiManager.swift in Sources */,
 				8AEF3C272B26E560005517AC /* ProfileTabView.swift in Sources */,
 				8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */,
+				8AEF3C392B279132005517AC /* FollowingsViewModel.swift in Sources */,
 				8AEF3C312B26F849005517AC /* ProfileViewCell.swift in Sources */,
 				8AEF3C252B26E556005517AC /* ExploreTabView.swift in Sources */,
+				8AEF3C372B279104005517AC /* FollowingsType.swift in Sources */,
 				8AEF3C122B26CC66005517AC /* AuthViewModel.swift in Sources */,
 				8AEF3C212B26E542005517AC /* HomeTabView.swift in Sources */,
 				8AD606A12B2498840058E90A /* OnBoardingScreen.swift in Sources */,
 				8AEF3C232B26E54C005517AC /* NotificationsTabView.swift in Sources */,
 				8AEF3C162B26CEC1005517AC /* BannerModifier.swift in Sources */,
+				8AEF3C352B2790EC005517AC /* FollowingsScreen.swift in Sources */,
 				8AEF3C292B26E78C005517AC /* HomeScreenViewModel.swift in Sources */,
 				8AEF3C332B26FC55005517AC /* ImageView.swift in Sources */,
 				8AEF3C182B26D728005517AC /* HomeScreen.swift in Sources */,
@@ -462,8 +504,10 @@
 				8AEF3C1D2B26D973005517AC /* GitlyScreenNavigationItem.swift in Sources */,
 				8AEF3C2F2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift in Sources */,
 				8AEF3C2B2B26E797005517AC /* ProfileViewModel.swift in Sources */,
+				8AEF3C492B279F42005517AC /* UsersScreenListView.swift in Sources */,
 				8AEF3C142B26CC87005517AC /* GitlyUserQueriesImplementation.swift in Sources */,
 				8AD6069F2B2498840058E90A /* GitlyApp.swift in Sources */,
+				8AEF3C3B2B27914C005517AC /* UserEntity.swift in Sources */,
 				8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

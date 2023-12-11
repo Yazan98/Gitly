@@ -14,6 +14,18 @@ protocol GitlyUserQueriesImplementationDescription {
         onAccountInvalid:  @escaping  () -> Void
     )
     
+    func getFollowersUsersByUserName(
+        userName: String,
+        pageHash: String,
+        onAccountResult:  @escaping ([UserEntity], String, Bool) -> Void
+    )
+    
+    func getFollowingsUsersByUserName(
+        userName: String,
+        pageHash: String,
+        onAccountResult:  @escaping ([UserEntity], String, Bool) -> Void
+    )
+    
     func getCurrentLoggedInUserInformation(onAccountResult:  @escaping (ProfileScreenHeader) -> Void)
 }
 
@@ -72,6 +84,120 @@ public final class GitlyUserQueriesImplementation: GitlyUserQueriesImplementatio
                 )
                 
                 onAccountResult(profileHeader)
+            }
+        }
+    }
+    
+    func getFollowersUsersByUserName(
+        userName: String,
+        pageHash: String,
+        onAccountResult:  @escaping ([UserEntity], String, Bool) -> Void
+    ) {
+        DispatchQueue.global(qos: .background).async {
+            if pageHash.isEmpty {
+                GitlyApiManager.shared.getApiInstance().fetch(
+                    query: GetFollowersFirstPageQuery(id: userName)
+                ) { result in
+                    guard let data = try? result.get().data else { return }
+                    guard let userInfo = data.user else { return }
+                    var users: [UserEntity] = []
+                    
+                    userInfo.followers.edges?.forEach { user in
+                        users.append(UserEntity(
+                            id: user?.node?.login ?? "",
+                            name: user?.node?.name ?? "",
+                            image: user?.node?.avatarUrl ?? "",
+                            description: user?.node?.bio ?? ""
+                        ))
+                    }
+                    
+                    onAccountResult(
+                        users,
+                        userInfo.followers.pageInfo.endCursor ?? "",
+                        userInfo.followers.pageInfo.hasNextPage
+                    )
+                }
+                return
+            }
+
+            GitlyApiManager.shared.getApiInstance().fetch(
+                query: GetFollowersByUserNameQuery(id: userName, pageId: pageHash)
+            ) { result in
+                guard let data = try? result.get().data else { return }
+                guard let userInfo = data.user else { return }
+                var users: [UserEntity] = []
+                
+                userInfo.followers.edges?.forEach { user in
+                    users.append(UserEntity(
+                        id: user?.node?.login ?? "",
+                        name: user?.node?.name ?? "",
+                        image: user?.node?.avatarUrl ?? "",
+                        description: user?.node?.bio ?? ""
+                    ))
+                }
+                
+                onAccountResult(
+                    users,
+                    userInfo.followers.pageInfo.endCursor ?? "",
+                    userInfo.followers.pageInfo.hasNextPage
+                )
+            }
+        }
+    }
+    
+    func getFollowingsUsersByUserName(
+        userName: String,
+        pageHash: String,
+        onAccountResult: @escaping ([UserEntity], String, Bool) -> Void
+    ) {
+        DispatchQueue.global(qos: .background).async {
+            if pageHash.isEmpty {
+                GitlyApiManager.shared.getApiInstance().fetch(
+                    query: GetFollowingsFirstPageQuery(id: userName)
+                ) { result in
+                    guard let data = try? result.get().data else { return }
+                    guard let userInfo = data.user else { return }
+                    var users: [UserEntity] = []
+                    
+                    userInfo.following.edges?.forEach { user in
+                        users.append(UserEntity(
+                            id: user?.node?.login ?? "",
+                            name: user?.node?.name ?? "",
+                            image: user?.node?.avatarUrl ?? "",
+                            description: user?.node?.bio ?? ""
+                        ))
+                    }
+                    
+                    onAccountResult(
+                        users,
+                        userInfo.following.pageInfo.endCursor ?? "",
+                        userInfo.following.pageInfo.hasNextPage
+                    )
+                }
+                return
+            }
+
+            GitlyApiManager.shared.getApiInstance().fetch(
+                query: GetFollowingsByUserNameQuery(id: userName, pageId: pageHash)
+            ) { result in
+                guard let data = try? result.get().data else { return }
+                guard let userInfo = data.user else { return }
+                var users: [UserEntity] = []
+                
+                userInfo.following.edges?.forEach { user in
+                    users.append(UserEntity(
+                        id: user?.node?.login ?? "",
+                        name: user?.node?.name ?? "",
+                        image: user?.node?.avatarUrl ?? "",
+                        description: user?.node?.bio ?? ""
+                    ))
+                }
+                
+                onAccountResult(
+                    users,
+                    userInfo.following.pageInfo.endCursor ?? "",
+                    userInfo.following.pageInfo.hasNextPage
+                )
             }
         }
     }

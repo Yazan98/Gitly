@@ -1,0 +1,18 @@
+query GetFollowingsByUserNameQuery($id: String!, $pageId: String!) {
+    user(login: $id) {
+    following(first: 40, after: $pageId) {
+        pageInfo {
+            endCursor
+            hasNextPage
+        }
+        edges {
+            node {
+              login
+              name
+              bio
+              avatarUrl
+            }
+        }
+    }
+  }
+}

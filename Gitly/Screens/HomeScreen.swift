@@ -31,7 +31,3 @@ struct HomeScreen: View {
         }.accentColor(.black)
     }
 }
-
-#Preview {
-    HomeScreen()
-}

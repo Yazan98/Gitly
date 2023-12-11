@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileViewCell: View {
     
+    @State private var isFollowingsSheetShown = false
+    @State private var isFollowersSheetShown = false
     let item: any ProfileScreenItem
     
     var body: some View {
@@ -193,12 +195,23 @@ struct ProfileViewCell: View {
                 HStack {
                     Image(systemName: "person.3.fill")
                     Text("\(item.followingsCount) Following").font(.caption)
+                }.sheet(isPresented: $isFollowingsSheetShown) {
+                    FollowingsScreen(type: .Followings, userId: item.id)
+                }
+                .onTapGesture {
+                    isFollowingsSheetShown = true
                 }
                 
                 HStack {
                     Image(systemName: "person.fill")
                     Text("\(item.followersCount) Followers").font(.caption)
                 }.padding(.leading, 10)
+                    .sheet(isPresented: $isFollowersSheetShown) {
+                        FollowingsScreen(type: .Followers, userId: item.id)
+                    }
+                    .onTapGesture {
+                        isFollowersSheetShown = true
+                    }
             }
             .padding(.top, 10)
         }
