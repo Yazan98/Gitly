@@ -17,7 +17,7 @@ struct ProfileViewCell: View {
         } else if item is ProfileKeyValueItem {
             self.getKeyValueItem(item: item as! ProfileKeyValueItem)
         } else {
-            Text("Item")
+            self.getPinnedRepositories(item: item as! ProfilePinnedRepositories)
         }
     }
     
@@ -30,6 +30,73 @@ struct ProfileViewCell: View {
         ]
         
         return colors[Int.random(in: 0...colors.count - 1)]
+    }
+    
+    private func getPinnedRepositories(item: ProfilePinnedRepositories) -> some View {
+        return VStack(alignment: .leading) {
+            Text("Pinned Repositories")
+                .padding(.top, 25)
+                .padding(.leading, 15)
+            
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 20) {
+                    ForEach(item.repositories, id: \.self) { item in
+                        ZStack(alignment: .top) {
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(Color.white)
+                                .shadow(radius: 3)
+                                .frame(width: 250, height: 130)
+
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text(item.name)
+                                        .font(.caption)
+                                        .fontWeight(.bold)
+                                        .lineLimit(1)
+                                        .padding(.top, 12)
+                                        .padding(.leading, 8)
+                                        .padding(.bottom, 2)
+                                        .multilineTextAlignment(.leading)
+                                    
+                                    Spacer()
+                                }
+
+                                Text(item.description)
+                                    .frame(width: 240, height: 48)
+                                    .font(.caption2)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(3)
+                                    .padding(.leading, 2)
+                                
+                                HStack {
+                                    Image(systemName: "star.fill")
+                                        .font(.caption2)
+                                    
+                                    Text("\(item.stargazerCount)")
+                                        .padding(.leading, 1)
+                                        .font(.caption2)
+                                    
+                                    Image(systemName: "paintbrush.pointed.fill")
+                                        .font(.caption2)
+                                        .padding(.leading, 20)
+                                    
+                                    Text("\(item.forkCount)")
+                                        .padding(.leading, 1)
+                                        .font(.caption2)
+                                }
+                                .padding(.top, 2)
+                                .padding(.leading, 8)
+                            }
+                            .frame(width: 240)
+                        }
+                    }
+                }
+                .padding(.top, 10)
+                .padding(.bottom, 10)
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
+            }
+        }
     }
     
     private func getKeyValueItem(item: ProfileKeyValueItem) -> some View {

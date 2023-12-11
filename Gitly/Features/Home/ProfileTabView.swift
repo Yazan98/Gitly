@@ -16,9 +16,11 @@ struct ProfileTabView: View {
             if viewModel.loadingState {
                 ProgressView() .progressViewStyle(CircularProgressViewStyle())
             } else {
-                LazyVStack {
-                    ForEach(0..<viewModel.screenItems.count) { index in
-                        ProfileViewCell(item: viewModel.screenItems[index])
+                ScrollView {
+                    LazyVStack {
+                        ForEach(0..<viewModel.screenItems.count) { index in
+                            ProfileViewCell(item: viewModel.screenItems[index])
+                        }
                     }
                 }
                 
