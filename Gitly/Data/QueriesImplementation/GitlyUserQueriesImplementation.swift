@@ -14,6 +14,11 @@ protocol GitlyUserQueriesImplementationDescription {
         onAccountInvalid:  @escaping  () -> Void
     )
     
+    func getUserInformationByUserName(
+        userName: String,
+        onAccountResult:  @escaping (ProfileScreenHeader) -> Void
+    )
+    
     func getFollowersUsersByUserName(
         userName: String,
         pageHash: String,
@@ -53,6 +58,36 @@ public final class GitlyUserQueriesImplementation: GitlyUserQueriesImplementatio
             }
             
             onAccountResult(userInfo)
+        }
+    }
+    
+    func getUserInformationByUserName(
+        userName: String,
+        onAccountResult:  @escaping (ProfileScreenHeader) -> Void
+    ) {
+        GitlyApiManager.shared.getApiInstance().fetch(
+            query: GetUserInformationByUserNameQuery(userName: userName)
+        ) { result in
+            guard let data = try? result.get().data else { return }
+            guard let userInfo = data.user else { return }
+            
+            let profileHeader = ProfileScreenHeader(
+                name: userInfo.name ?? "",
+                bio: userInfo.bio ?? "",
+                id: userInfo.login,
+                status: userInfo.status?.message ?? "",
+                image: userInfo.avatarUrl,
+                location: userInfo.location ?? "",
+                website: userInfo.websiteUrl ?? "",
+                isGithubDeveloperProgramEnabled: userInfo.isDeveloperProgramMember,
+                followersCount: userInfo.followers.totalCount ,
+                followingsCount: userInfo.following.totalCount,
+                starredRepositoriesCount: userInfo.starredRepositories.totalCount,
+                repositoriesCount: userInfo.repositories.totalCount,
+                organizationsCount: userInfo.organizations.totalCount
+            )
+            
+            onAccountResult(profileHeader)
         }
     }
     

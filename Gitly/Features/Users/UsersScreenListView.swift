@@ -21,7 +21,9 @@ struct UsersScreenListView: View {
                 ScrollView {
                     LazyVStack {
                         ForEach(Array(viewModel.usersList.enumerated()), id: \.1) { index, user in
-                            NavigationLink(destination: EmptyView()) {
+                            NavigationLink(
+                                destination: ProfileScreenView(userName: user.name, userId: user.id)
+                            ) {
                                 HStack(alignment: .top) {
                                     if let profileImage = URL(string: user.image) {
                                         ImageView(

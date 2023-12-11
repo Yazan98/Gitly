@@ -27,8 +27,34 @@ public final class ProfileViewModel: ObservableObject {
         }
     }
     
+    public func getProfileInformationByUserName(userName: String) {
+        if screenItems.isEmpty == false {
+            return
+        }
+        
+        loadingState = true
+        profileRepository.getUserInformationByUserName(userName: userName) { userInfo in
+            self.getPinnedRepositoriesByUserName(userName: userName, userInfo: userInfo)
+        }
+    }
+    
     private func getPinnedRepositories(userInfo: ProfileScreenHeader) {
         repositoriesQueryImpl.getPinnedRepositoriesByCurrentUser { repositories in
+            var screenContent: [any ProfileScreenItem] = []
+            
+            screenContent.append(userInfo)
+            screenContent.append(contentsOf: self.getKeyValueItemsByProfileItem(profile: userInfo))
+            screenContent.append(repositories)
+            
+            DispatchQueue.main.async {
+                self.loadingState = false
+                self.screenItems = screenContent
+            }
+        }
+    }
+    
+    private func getPinnedRepositoriesByUserName(userName: String, userInfo: ProfileScreenHeader) {
+        repositoriesQueryImpl.getPinnedRepositoriesByUserName(userName: userName) { repositories in
             var screenContent: [any ProfileScreenItem] = []
             
             screenContent.append(userInfo)
