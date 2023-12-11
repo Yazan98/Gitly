@@ -18,9 +18,11 @@ struct ProfileTabView: View {
             } else {
                 LazyVStack {
                     ForEach(0..<viewModel.screenItems.count) { index in
-                        Text("Item in : \(index)")
+                        ProfileViewCell(item: viewModel.screenItems[index])
                     }
                 }
+                
+                Spacer()
             }
         }
         .clipped()

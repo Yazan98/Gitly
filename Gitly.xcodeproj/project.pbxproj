@@ -34,6 +34,8 @@
 		8AEF3C2B2B26E797005517AC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C2A2B26E797005517AC /* ProfileViewModel.swift */; };
 		8AEF3C2D2B26E7E0005517AC /* ProfileScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C2C2B26E7E0005517AC /* ProfileScreenItem.swift */; };
 		8AEF3C2F2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C2E2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift */; };
+		8AEF3C312B26F849005517AC /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C302B26F849005517AC /* ProfileViewCell.swift */; };
+		8AEF3C332B26FC55005517AC /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C322B26FC55005517AC /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		8AEF3C2A2B26E797005517AC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		8AEF3C2C2B26E7E0005517AC /* ProfileScreenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenItem.swift; sourceTree = "<group>"; };
 		8AEF3C2E2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyRepositoriesQueriesImplementation.swift; sourceTree = "<group>"; };
+		8AEF3C302B26F849005517AC /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		8AEF3C322B26FC55005517AC /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		AB65DE25A202FEAC114ADD48 /* Pods_Gitly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				8AEF3C152B26CEC1005517AC /* BannerModifier.swift */,
+				8AEF3C302B26F849005517AC /* ProfileViewCell.swift */,
+				8AEF3C322B26FC55005517AC /* ImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				8AEF3C052B265B0F005517AC /* GitlyApiManager.swift in Sources */,
 				8AEF3C272B26E560005517AC /* ProfileTabView.swift in Sources */,
 				8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */,
+				8AEF3C312B26F849005517AC /* ProfileViewCell.swift in Sources */,
 				8AEF3C252B26E556005517AC /* ExploreTabView.swift in Sources */,
 				8AEF3C122B26CC66005517AC /* AuthViewModel.swift in Sources */,
 				8AEF3C212B26E542005517AC /* HomeTabView.swift in Sources */,
@@ -449,6 +456,7 @@
 				8AEF3C232B26E54C005517AC /* NotificationsTabView.swift in Sources */,
 				8AEF3C162B26CEC1005517AC /* BannerModifier.swift in Sources */,
 				8AEF3C292B26E78C005517AC /* HomeScreenViewModel.swift in Sources */,
+				8AEF3C332B26FC55005517AC /* ImageView.swift in Sources */,
 				8AEF3C182B26D728005517AC /* HomeScreen.swift in Sources */,
 				8AEF3C1A2B26D957005517AC /* GitlyScreenNavigationView.swift in Sources */,
 				8AEF3C1D2B26D973005517AC /* GitlyScreenNavigationItem.swift in Sources */,
