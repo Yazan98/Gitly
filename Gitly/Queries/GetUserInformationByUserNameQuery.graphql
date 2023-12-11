@@ -1,0 +1,46 @@
+query GetUserInformationByUserName($userName: String!) {
+    user(login: $userName) {
+        login
+        name
+        bio
+        organizations(first: 100) {
+            totalCount
+        }
+        avatarUrl(size: 50)
+        company
+        createdAt
+        followers {
+            totalCount
+        }
+        following {
+            totalCount
+        }
+        hasSponsorsListing
+        isGitHubStar
+        location
+        starredRepositories {
+            isOverLimit
+            totalCount
+        }
+        status {
+            createdAt
+            emoji
+            emojiHTML
+            expiresAt
+            id
+            indicatesLimitedAvailability
+            message
+            updatedAt
+        }
+        twitterUsername
+        websiteUrl
+        email
+        isCampusExpert
+        isDeveloperProgramMember
+        updatedAt
+        url
+        viewerIsFollowing
+        viewerCanFollow
+    }
+}
+

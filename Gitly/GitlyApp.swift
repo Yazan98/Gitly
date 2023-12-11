@@ -16,10 +16,12 @@ struct GitlyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                if isUserLoggedIn {
-                    LoginScreen()
-                } else {
+            if isUserLoggedIn {
+                NavigationView {
+                    HomeScreen()
+                }
+            } else {
+                NavigationView {
                     OnBoardingScreen(onLoginScreenDirection: $onNavigationDirectly)
                 }
             }

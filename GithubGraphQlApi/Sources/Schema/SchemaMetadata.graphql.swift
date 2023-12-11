@@ -267,6 +267,10 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     case "PackageTag": return GithubGraphQlApi.Objects.PackageTag
     case "PullRequestThread": return GithubGraphQlApi.Objects.PullRequestThread
     case "PinnableItemConnection": return GithubGraphQlApi.Objects.PinnableItemConnection
+    case "OrganizationConnection": return GithubGraphQlApi.Objects.OrganizationConnection
+    case "FollowerConnection": return GithubGraphQlApi.Objects.FollowerConnection
+    case "FollowingConnection": return GithubGraphQlApi.Objects.FollowingConnection
+    case "StarredRepositoryConnection": return GithubGraphQlApi.Objects.StarredRepositoryConnection
     default: return nil
     }
   }
