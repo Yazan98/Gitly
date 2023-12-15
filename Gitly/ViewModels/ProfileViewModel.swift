@@ -70,9 +70,27 @@ public final class ProfileViewModel: ObservableObject {
     
     private func getKeyValueItemsByProfileItem(profile: ProfileScreenHeader) -> [any ProfileScreenItem] {
         return [
-            ProfileKeyValueItem(iconName: "book.pages.fill", name: "Repositories", value: profile.repositoriesCount),
-            ProfileKeyValueItem(iconName: "star.fill", name: "Starred", value: profile.starredRepositoriesCount),
-            ProfileKeyValueItem(iconName: "building.2", name: "Organizations", value: profile.organizationsCount),
+            ProfileKeyValueItem(
+                iconName: "book.pages.fill",
+                name: "Repositories",
+                value: profile.repositoriesCount,
+                type: .Repositories,
+                userName: profile.id
+            ),
+            ProfileKeyValueItem(
+                iconName: "star.fill",
+                name: "Starred",
+                value: profile.starredRepositoriesCount,
+                type: .StarredRepositories,
+                userName: profile.id
+            ),
+            ProfileKeyValueItem(
+                iconName: "building.2",
+                name: "Organizations",
+                value: profile.organizationsCount,
+                type: .Organizations,
+                userName: profile.id
+            ),
         ]
     }
 }

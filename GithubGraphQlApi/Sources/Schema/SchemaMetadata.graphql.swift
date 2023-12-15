@@ -270,9 +270,10 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     case "PageInfo": return GithubGraphQlApi.Objects.PageInfo
     case "UserEdge": return GithubGraphQlApi.Objects.UserEdge
     case "PinnableItemConnection": return GithubGraphQlApi.Objects.PinnableItemConnection
+    case "RepositoryConnection": return GithubGraphQlApi.Objects.RepositoryConnection
+    case "IssueConnection": return GithubGraphQlApi.Objects.IssueConnection
     case "FollowerConnection": return GithubGraphQlApi.Objects.FollowerConnection
     case "OrganizationConnection": return GithubGraphQlApi.Objects.OrganizationConnection
-    case "RepositoryConnection": return GithubGraphQlApi.Objects.RepositoryConnection
     case "StarredRepositoryConnection": return GithubGraphQlApi.Objects.StarredRepositoryConnection
     default: return nil
     }

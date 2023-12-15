@@ -37,6 +37,14 @@ public struct ProfileKeyValueItem: ProfileScreenItem {
     let iconName: String
     let name: String
     let value: Int
+    let type: ProfileNavigationItem
+    let userName: String
+}
+
+public enum ProfileNavigationItem {
+    case Repositories
+    case Organizations
+    case StarredRepositories
 }
 
 public struct PinnedRepository: Hashable {

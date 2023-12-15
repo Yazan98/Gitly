@@ -17,15 +17,21 @@ struct HomeScreen: View {
                 Label("Home", systemImage: "house.fill")
             }
             
-            NotificationsTabView().tabItem {
+            NavigationView {
+                NotificationsTabView()
+            }.tabItem {
                 Label("Notifications", systemImage: "paperplane.fill")
             }
             
-            ExploreTabView().tabItem {
+            NavigationView {
+                ExploreTabView()
+            }.tabItem {
                 Label("Explore", systemImage: "flag.2.crossed.fill")
             }
             
-            ProfileTabView(viewModel: profileViewModel).tabItem {
+            NavigationView {
+                ProfileTabView(viewModel: profileViewModel)
+            }.tabItem {
                 Label("Profile", systemImage: "person.crop.circle")
             }
         }.accentColor(.black)

@@ -102,23 +102,39 @@ struct ProfileViewCell: View {
     }
     
     private func getKeyValueItem(item: ProfileKeyValueItem) -> some View {
-        return HStack {
+        return NavigationLink(destination: self.getViewNavigationByType(
+            itemType: item.type,
+            userName: item.userName
+        )) {
             HStack {
-                Image(systemName: item.iconName)
-                    .foregroundColor(.white)
-                    .padding(5)
+                HStack {
+                    Image(systemName: item.iconName)
+                        .foregroundColor(.white)
+                        .padding(5)
+                }
+                .background(self.getBackgroundColor())
+                .cornerRadius(8)
+                
+                Text(item.name)
+                Spacer()
+                Text("\(item.value)")
             }
-            .background(self.getBackgroundColor())
-            .cornerRadius(8)
-            
-            Text(item.name)
-            Spacer()
-            Text("\(item.value)")
+            .padding(.top, 7)
+            .padding(.bottom, 7)
+            .padding(.leading, 18)
+            .padding(.trailing, 20)
         }
-        .padding(.top, 7)
-        .padding(.bottom, 7)
-        .padding(.leading, 18)
-        .padding(.trailing, 20)
+    }
+    
+    private func getViewNavigationByType(itemType: ProfileNavigationItem, userName: String) -> some View {
+        switch itemType {
+        case .Repositories:
+            return RepositoriesListView(userId: userName)
+        case .StarredRepositories:
+            return RepositoriesListView(userId: userName)
+        case .Organizations:
+            return RepositoriesListView(userId: userName)
+        }
     }
     
     private func getHeaderView(item: ProfileScreenHeader) -> some View {
