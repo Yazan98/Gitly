@@ -21,6 +21,33 @@ private protocol GitlyRepositoriesQueriesImplementationDescription {
 
 public final class GitlyRepositoriesQueriesImplementation: GitlyRepositoriesQueriesImplementationDescription {
     
+    func getPopularRepositories(pageNumber: Int, onResult: @escaping ([GitlyRepository]) -> Void) {
+        GitlyApiManager.shared.onGetApiContent(
+            requestUrl: GitlyApiPaths.SearchApi.getPaths() + "&page=\(pageNumber)",
+            responseType: PopularRepositoriesResponse.self,
+            onSuccessResponse: { result in
+                var repositoriesResult: [GitlyRepository] = []
+                result.items.forEach { repo in
+                    repositoriesResult.append(GitlyRepository(
+                        id: "\(repo.id)",
+                        name: repo.name,
+                        ownerName: repo.owner.login,
+                        description: repo.description ?? "",
+                        languageName: "",
+                        languageColor: "",
+                        isPublic: repo.visibility == "PUBLIC",
+                        starsCount: repo.stargazers_count,
+                        forkCount: repo.forks_count,
+                        issuesCount: 0))
+                }
+                
+                onResult(repositoriesResult)
+            },
+            onErrorResponse: { error in
+                print("Error : \(error)")
+        })
+    }
+    
     func getPinnedRepositoriesByUserName(userName: String, onRepositories: @escaping (ProfilePinnedRepositories) -> Void) {
         DispatchQueue.global(qos: .background).async {
             GitlyApiManager.shared.getApiInstance().fetch(

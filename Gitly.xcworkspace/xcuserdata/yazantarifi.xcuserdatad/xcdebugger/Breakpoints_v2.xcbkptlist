@@ -222,8 +222,8 @@
             filePath = "Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "getRepositoriesByUserName(userName:paginationHash:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "getRepositoriesByUserName(userName:paginationHash:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,8 +254,8 @@
             filePath = "Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "getRepositoriesByUserName(userName:paginationHash:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -338,6 +338,339 @@
             endingLineNumber = "23"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF1DCCF1-CD54-4ADF-9ABE-7C7CFEF04128"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getPopularRepositories(pageNumber:onResult:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EF1DCCF1-CD54-4ADF-9ABE-7C7CFEF04128 - 8d7bb29416b4a6ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Gitly.PopularRepositoriesResponse) -&gt; () in Gitly.GitlyRepositoriesQueriesImplementation.getPopularRepositories(pageNumber: Swift.Int, onResult: (Swift.Array&lt;Gitly.GitlyRepository&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "EF1DCCF1-CD54-4ADF-9ABE-7C7CFEF04128 - 56ae52f587d9af79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 (Gitly.PopularRepositoriesResponse) -&gt; () in Gitly.GitlyRepositoriesQueriesImplementation.getPopularRepositories(pageNumber: Swift.Int, onResult: (Swift.Array&lt;Gitly.GitlyRepository&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "EF1DCCF1-CD54-4ADF-9ABE-7C7CFEF04128 - 8d7bb29416b4a6ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Gitly.PopularRepositoriesResponse) -&gt; () in Gitly.GitlyRepositoriesQueriesImplementation.getPopularRepositories(pageNumber: Swift.Int, onResult: (Swift.Array&lt;Gitly.GitlyRepository&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7B69F42-A249-4E03-B9EC-AED263F7D202"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getPopularRepositories(pageNumber:onResult:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D7B69F42-A249-4E03-B9EC-AED263F7D202 - 8d7bb29416b4a68f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Gitly.PopularRepositoriesResponse) -&gt; () in Gitly.GitlyRepositoriesQueriesImplementation.getPopularRepositories(pageNumber: Swift.Int, onResult: (Swift.Array&lt;Gitly.GitlyRepository&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "D7B69F42-A249-4E03-B9EC-AED263F7D202 - d74ec91bee5e8d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Gitly.RepositoryItem) -&gt; () in closure #1 (Gitly.PopularRepositoriesResponse) -&gt; () in Gitly.GitlyRepositoriesQueriesImplementation.getPopularRepositories(pageNumber: Swift.Int, onResult: (Swift.Array&lt;Gitly.GitlyRepository&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "D7B69F42-A249-4E03-B9EC-AED263F7D202 - 8d7bb29416b4a68f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Gitly.PopularRepositoriesResponse) -&gt; () in Gitly.GitlyRepositoriesQueriesImplementation.getPopularRepositories(pageNumber: Swift.Int, onResult: (Swift.Array&lt;Gitly.GitlyRepository&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "D7B69F42-A249-4E03-B9EC-AED263F7D202 - d74ec91bee5e8d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Gitly.RepositoryItem) -&gt; () in closure #1 (Gitly.PopularRepositoriesResponse) -&gt; () in Gitly.GitlyRepositoriesQueriesImplementation.getPopularRepositories(pageNumber: Swift.Int, onResult: (Swift.Array&lt;Gitly.GitlyRepository&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C12B0C5-993F-460E-A59B-E8671104108F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/QueriesImplementation/GitlyRepositoriesQueriesImplementation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getPopularRepositories(pageNumber:onResult:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AD252AA-66ED-49C8-A7E3-593EA2EF788F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/ViewModels/PopularRepositoriesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getScreenItems()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5E019A3-3B03-4632-AEAF-6A83E8587DD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/GitlyApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "onGetApiContent(requestUrl:responseType:onSuccessResponse:onErrorResponse:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57EC4455-C858-40C3-9513-EDCE774EE01F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/GitlyApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "onGetApiContent(requestUrl:responseType:onSuccessResponse:onErrorResponse:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "57EC4455-C858-40C3-9513-EDCE774EE01F - e359e059fd9cdbca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in Gitly.GitlyApiManager.onGetApiContent&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(requestUrl: Swift.String, responseType: &#x3c4;_0_0.Type, onSuccessResponse: (&#x3c4;_0_0) -&gt; (), onErrorResponse: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/GitlyApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "384">
+               </Location>
+               <Location
+                  uuid = "57EC4455-C858-40C3-9513-EDCE774EE01F - ada2be78d4c27208"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in Gitly.GitlyApiManager.onGetApiContent&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(requestUrl: Swift.String, responseType: &#x3c4;_0_0.Type, onSuccessResponse: (&#x3c4;_0_0) -&gt; (), onErrorResponse: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/GitlyApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "336">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A765B8D8-8A16-4DEB-9C57-5A9DEF3AF2DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/GitlyApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "onGetApiContent(requestUrl:responseType:onSuccessResponse:onErrorResponse:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01BF339D-3BFC-40AC-B023-66D05AD32D37"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/GitlyApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "onGetApiContent(requestUrl:responseType:onSuccessResponse:onErrorResponse:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "01BF339D-3BFC-40AC-B023-66D05AD32D37 - ada2be78d4c273ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in Gitly.GitlyApiManager.onGetApiContent&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(requestUrl: Swift.String, responseType: &#x3c4;_0_0.Type, onSuccessResponse: (&#x3c4;_0_0) -&gt; (), onErrorResponse: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/GitlyApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "01BF339D-3BFC-40AC-B023-66D05AD32D37 - ada2be78d4c273ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in Gitly.GitlyApiManager.onGetApiContent&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(requestUrl: Swift.String, responseType: &#x3c4;_0_0.Type, onSuccessResponse: (&#x3c4;_0_0) -&gt; (), onErrorResponse: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Gitly"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yazantarifi/Code/Gitly/Gitly/Data/GitlyApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "997DC3E7-D4AE-4200-B7CF-4BD66AC73E83"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/GitlyApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "onGetApiContent(requestUrl:responseType:onSuccessResponse:onErrorResponse:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89FDB2DE-536D-4218-AE70-CD8343967C3D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gitly/Data/GitlyApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "onGetApiContent(requestUrl:responseType:onSuccessResponse:onErrorResponse:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

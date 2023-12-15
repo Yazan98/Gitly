@@ -8,9 +8,11 @@
 import Foundation
 import Apollo
 import ApolloAPI
+import Alamofire
 
 public class GitlyApiManager {
     
+    public static let API_BASE_URL = "https://api.github.com"
     private static let GITHUB_BASE_URL = "https://api.github.com/graphql"
     public static let shared = GitlyApiManager()
     
@@ -30,6 +32,84 @@ public class GitlyApiManager {
           return ApolloClient(networkTransport: requestChainTransport, store: store)
     }
     
+    public func onGetApiContent<Response: Codable>(
+        requestUrl: String,
+        responseType: [Response].Type,
+        onSuccessResponse: @escaping ([Response]) -> Void,
+        onErrorResponse: @escaping (Error) -> Void
+    ) {
+            DispatchQueue.global(qos: .background).async {
+                let apiBaseUrl = GitlyApiManager.API_BASE_URL
+                GitlyApiManager.apiManager.request(
+                    apiBaseUrl + requestUrl,
+                    method: .get
+                ).responseDecodable(of: responseType.self) { response in
+                    DispatchQueue.main.async {
+                        switch response.result {
+                        case .success(let response):
+                            onSuccessResponse(response)
+                        case .failure(let error):
+                            onErrorResponse(error)
+                        }
+                    }
+                }
+            }
+    }
+    
+    
+    public func onGetApiContent<Response: Codable>(
+        requestUrl: String,
+        responseType: Response.Type,
+        onSuccessResponse: @escaping (Response) -> Void,
+        onErrorResponse: @escaping (Error) -> Void
+    ) {
+            DispatchQueue.global(qos: .background).async {
+                let apiBaseUrl = GitlyApiManager.API_BASE_URL
+                GitlyApiManager.apiManager.request(
+                    apiBaseUrl + requestUrl,
+                    method: .get
+                ).responseDecodable(of: responseType.self) { response in
+                    DispatchQueue.main.async {
+                        switch response.result {
+                        case .success(let response):
+                            onSuccessResponse(response)
+                        case .failure(let error):
+                            onErrorResponse(error)
+                        }
+                    }
+                }
+            }
+    }
+    
+    
+    static let apiManager: Session = {
+            let configuration = URLSessionConfiguration.default
+            configuration.timeoutIntervalForRequest = 30000
+
+            var headers = HTTPHeaders()
+            headers.add(.accept("application/json"))
+            headers.add(.authorization("Bearer \(GitlyStorageKeysManager.shared.getUserTokenValue())"))
+
+            return Session(configuration: configuration, interceptor: ApiRequestInterceptor(headers: headers))
+        }()
+
+}
+
+struct ApiRequestInterceptor: RequestInterceptor {
+    let headers: HTTPHeaders
+
+    func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
+        var modifiedURLRequest = urlRequest
+        headers.forEach { header in
+            modifiedURLRequest.headers.add(header)
+        }
+        completion(.success(modifiedURLRequest))
+    }
+
+    func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
+        // Handle retries if needed
+        completion(.doNotRetry)
+    }
 }
 
 struct NetworkInterceptorProvider: InterceptorProvider {

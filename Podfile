@@ -5,6 +5,6 @@ target 'Gitly' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 #  pod 'Realm', '~> 10.44'
-#  pod 'Alamofire'
+  pod 'Alamofire'
 
 end

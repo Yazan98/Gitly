@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-Gitly/Pods-Gitly-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework

@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeScreen: View {
     
     @StateObject private var profileViewModel = ProfileViewModel()
+    @StateObject private var exploreViewModel = PopularRepositoriesViewModel()
     
     var body: some View {
         TabView {
@@ -24,7 +25,7 @@ struct HomeScreen: View {
             }
             
             NavigationView {
-                ExploreTabView()
+                ExploreTabView(viewModel: exploreViewModel)
             }.tabItem {
                 Label("Explore", systemImage: "flag.2.crossed.fill")
             }
