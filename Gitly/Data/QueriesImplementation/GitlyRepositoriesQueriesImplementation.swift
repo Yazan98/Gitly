@@ -172,6 +172,7 @@ public final class GitlyRepositoriesQueriesImplementation: GitlyRepositoriesQuer
         return GitlyRepository(
             id: item?.id ?? "",
             name: item?.name ?? "",
+            ownerName: item?.owner.login ?? "",
             description: item?.description ?? "",
             languageName: item?.primaryLanguage?.name ?? "",
             languageColor: item?.primaryLanguage?.color ?? "",
@@ -188,6 +189,7 @@ public final class GitlyRepositoriesQueriesImplementation: GitlyRepositoriesQuer
         return GitlyRepository(
             id: item?.id ?? "",
             name: item?.name ?? "",
+            ownerName: item?.owner.login ?? "",
             description: item?.description ?? "",
             languageName: item?.primaryLanguage?.name ?? "",
             languageColor: item?.primaryLanguage?.color ?? "",
@@ -204,6 +206,7 @@ public final class GitlyRepositoriesQueriesImplementation: GitlyRepositoriesQuer
         return GitlyRepository(
             id: item?.id ?? "",
             name: item?.name ?? "",
+            ownerName: item?.owner.login ?? "", 
             description: item?.description ?? "",
             languageName: item?.primaryLanguage?.name ?? "",
             languageColor: item?.primaryLanguage?.color ?? "",
@@ -220,9 +223,10 @@ public final class GitlyRepositoriesQueriesImplementation: GitlyRepositoriesQuer
         return GitlyRepository(
             id: item?.id ?? "",
             name: item?.name ?? "",
+            ownerName: item?.owner.login ?? "",
             description: item?.description ?? "",
             languageName: item?.primaryLanguage?.name ?? "",
-            languageColor: item?.primaryLanguage?.color ?? "",
+            languageColor: item?.primaryLanguage?.color ?? "", 
             isPublic: item?.visibility.rawValue == "PUBLIC",
             starsCount: item?.stargazerCount ?? 0,
             forkCount: item?.forkCount ?? 0,

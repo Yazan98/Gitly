@@ -6,6 +6,9 @@ query GetFirstPageRepositoriesQuery($id: String!) {
                 endCursor
             }
             nodes {
+            owner {
+                    login
+                }
                 id
                 name
                 description

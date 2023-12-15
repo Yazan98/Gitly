@@ -7,7 +7,7 @@ public class GetRepositoriesByPageHashQuery: GraphQLQuery {
   public static let operationName: String = "GetRepositoriesByPageHashQuery"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query GetRepositoriesByPageHashQuery($id: String!, $pageHash: String!) { user(login: $id) { __typename repositories( first: 40 after: $pageHash orderBy: { field: UPDATED_AT, direction: DESC } ) { __typename pageInfo { __typename hasNextPage endCursor } nodes { __typename id name description stargazerCount forkCount issues { __typename totalCount } forkCount forks { __typename totalCount totalDiskUsage } defaultBranchRef { __typename id name } isFork primaryLanguage { __typename color id name } stargazerCount visibility latestRelease { __typename createdAt databaseId description descriptionHTML id isDraft isLatest isPrerelease name publishedAt resourcePath shortDescriptionHTML tagName updatedAt url viewerCanReact author { __typename avatarUrl bio company companyHTML createdAt email id isBountyHunter location login name url websiteUrl } } } } } }"#
+      #"query GetRepositoriesByPageHashQuery($id: String!, $pageHash: String!) { user(login: $id) { __typename repositories( first: 40 after: $pageHash orderBy: { field: UPDATED_AT, direction: DESC } ) { __typename pageInfo { __typename hasNextPage endCursor } nodes { __typename owner { __typename login } id name description stargazerCount forkCount issues { __typename totalCount } forkCount forks { __typename totalCount totalDiskUsage } defaultBranchRef { __typename id name } isFork primaryLanguage { __typename color id name } stargazerCount visibility latestRelease { __typename createdAt databaseId description descriptionHTML id isDraft isLatest isPrerelease name publishedAt resourcePath shortDescriptionHTML tagName updatedAt url viewerCanReact author { __typename avatarUrl bio company companyHTML createdAt email id isBountyHunter location login name url websiteUrl } } } } } }"#
     ))
 
   public var id: String
@@ -110,6 +110,7 @@ public class GetRepositoriesByPageHashQuery: GraphQLQuery {
           public static var __parentType: ApolloAPI.ParentType { GithubGraphQlApi.Objects.Repository }
           public static var __selections: [ApolloAPI.Selection] { [
             .field("__typename", String.self),
+            .field("owner", Owner.self),
             .field("id", GithubGraphQlApi.ID.self),
             .field("name", String.self),
             .field("description", String?.self),
@@ -124,6 +125,8 @@ public class GetRepositoriesByPageHashQuery: GraphQLQuery {
             .field("latestRelease", LatestRelease?.self),
           ] }
 
+          /// The User owner of the repository.
+          public var owner: Owner { __data["owner"] }
           /// The Node ID of this object
           public var id: GithubGraphQlApi.ID { __data["id"] }
           /// The name of the repository.
@@ -149,6 +152,23 @@ public class GetRepositoriesByPageHashQuery: GraphQLQuery {
           public var visibility: GraphQLEnum<GithubGraphQlApi.RepositoryVisibility> { __data["visibility"] }
           /// Get the latest release for the repository if one exists.
           public var latestRelease: LatestRelease? { __data["latestRelease"] }
+
+          /// User.Repositories.Node.Owner
+          ///
+          /// Parent Type: `RepositoryOwner`
+          public struct Owner: GithubGraphQlApi.SelectionSet {
+            public let __data: DataDict
+            public init(_dataDict: DataDict) { __data = _dataDict }
+
+            public static var __parentType: ApolloAPI.ParentType { GithubGraphQlApi.Interfaces.RepositoryOwner }
+            public static var __selections: [ApolloAPI.Selection] { [
+              .field("__typename", String.self),
+              .field("login", String.self),
+            ] }
+
+            /// The username used to login.
+            public var login: String { __data["login"] }
+          }
 
           /// User.Repositories.Node.Issues
           ///

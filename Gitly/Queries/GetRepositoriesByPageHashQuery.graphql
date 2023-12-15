@@ -7,6 +7,9 @@ query GetRepositoriesByPageHashQuery($id: String!, $pageHash: String!) {
                 endCursor
             }
             nodes {
+            owner {
+                    login
+                }
                 id
                 name
                 description

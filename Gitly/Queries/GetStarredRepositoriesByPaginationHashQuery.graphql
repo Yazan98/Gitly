@@ -7,6 +7,9 @@ query GetStarredRepositoriesByPaginationHashQuery($id: String!, $pageHash: Strin
                 endCursor
             }
             nodes {
+            owner {
+                    login
+                }
                 id
                 name
                 description

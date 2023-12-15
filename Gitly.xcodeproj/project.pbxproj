@@ -28,6 +28,7 @@
 		8AE42AB12B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AE42AB02B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql */; };
 		8AE42AB32B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AE42AB22B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql */; };
 		8AE42AB52B2BEC96003A7A75 /* StarredRepositoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AB42B2BEC96003A7A75 /* StarredRepositoriesListView.swift */; };
+		8AE42AB72B2C17EB003A7A75 /* RepositoryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AB62B2C17EB003A7A75 /* RepositoryScreenView.swift */; };
 		8AEF3C052B265B0F005517AC /* GitlyApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */; };
 		8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */; };
 		8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C0C2B266448005517AC /* LoginScreen.swift */; };
@@ -101,6 +102,7 @@
 		8AE42AB02B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetStarredRepositoriesFirstPageQuery.graphql; sourceTree = "<group>"; };
 		8AE42AB22B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetStarredRepositoriesByPaginationHashQuery.graphql; sourceTree = "<group>"; };
 		8AE42AB42B2BEC96003A7A75 /* StarredRepositoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredRepositoriesListView.swift; sourceTree = "<group>"; };
+		8AE42AB62B2C17EB003A7A75 /* RepositoryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryScreenView.swift; sourceTree = "<group>"; };
 		8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyApiManager.swift; sourceTree = "<group>"; };
 		8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyStorageKeysManager.swift; sourceTree = "<group>"; };
 		8AEF3C0C2B266448005517AC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				8AE42A9B2B27AA94003A7A75 /* RepositoriesListView.swift */,
 				8AE42AB42B2BEC96003A7A75 /* StarredRepositoriesListView.swift */,
+				8AE42AB62B2C17EB003A7A75 /* RepositoryScreenView.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				8AE42AAA2B2BE754003A7A75 /* RepositoryView.swift in Sources */,
 				8AEF3C162B26CEC1005517AC /* BannerModifier.swift in Sources */,
 				8AEF3C352B2790EC005517AC /* FollowingsScreen.swift in Sources */,
+				8AE42AB72B2C17EB003A7A75 /* RepositoryScreenView.swift in Sources */,
 				8AEF3C292B26E78C005517AC /* HomeScreenViewModel.swift in Sources */,
 				8AE42AA62B2BDE7E003A7A75 /* GitlyRepository.swift in Sources */,
 				8AEF3C332B26FC55005517AC /* ImageView.swift in Sources */,

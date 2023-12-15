@@ -43,53 +43,58 @@ struct ProfileViewCell: View {
             ScrollView(.horizontal) {
                 LazyHStack(spacing: 20) {
                     ForEach(item.repositories, id: \.self) { item in
-                        ZStack(alignment: .top) {
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(Color.white)
-                                .shadow(radius: 3)
-                                .frame(width: 250, height: 130)
+                        NavigationLink(destination: RepositoryScreenView(
+                            userName: GitlyStorageKeysManager.shared.getUserNameValue(),
+                            repositoryName: item.name
+                        )) {
+                            ZStack(alignment: .top) {
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(Color.white)
+                                    .shadow(radius: 3)
+                                    .frame(width: 250, height: 130)
 
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text(item.name)
-                                        .font(.caption)
-                                        .fontWeight(.bold)
-                                        .lineLimit(1)
-                                        .padding(.top, 12)
-                                        .padding(.leading, 8)
-                                        .padding(.bottom, 2)
+                                VStack(alignment: .leading) {
+                                    HStack {
+                                        Text(item.name)
+                                            .font(.caption)
+                                            .fontWeight(.bold)
+                                            .lineLimit(1)
+                                            .padding(.top, 12)
+                                            .padding(.leading, 8)
+                                            .padding(.bottom, 2)
+                                            .multilineTextAlignment(.leading)
+                                        
+                                        Spacer()
+                                    }
+
+                                    Text(item.description)
+                                        .frame(width: 240, height: 48)
+                                        .font(.caption2)
                                         .multilineTextAlignment(.leading)
+                                        .lineLimit(3)
+                                        .padding(.leading, 2)
                                     
-                                    Spacer()
+                                    HStack {
+                                        Image(systemName: "star.fill")
+                                            .font(.caption2)
+                                        
+                                        Text("\(item.stargazerCount)")
+                                            .padding(.leading, 1)
+                                            .font(.caption2)
+                                        
+                                        Image(systemName: "paintbrush.pointed.fill")
+                                            .font(.caption2)
+                                            .padding(.leading, 20)
+                                        
+                                        Text("\(item.forkCount)")
+                                            .padding(.leading, 1)
+                                            .font(.caption2)
+                                    }
+                                    .padding(.top, 2)
+                                    .padding(.leading, 8)
                                 }
-
-                                Text(item.description)
-                                    .frame(width: 240, height: 48)
-                                    .font(.caption2)
-                                    .multilineTextAlignment(.leading)
-                                    .lineLimit(3)
-                                    .padding(.leading, 2)
-                                
-                                HStack {
-                                    Image(systemName: "star.fill")
-                                        .font(.caption2)
-                                    
-                                    Text("\(item.stargazerCount)")
-                                        .padding(.leading, 1)
-                                        .font(.caption2)
-                                    
-                                    Image(systemName: "paintbrush.pointed.fill")
-                                        .font(.caption2)
-                                        .padding(.leading, 20)
-                                    
-                                    Text("\(item.forkCount)")
-                                        .padding(.leading, 1)
-                                        .font(.caption2)
-                                }
-                                .padding(.top, 2)
-                                .padding(.leading, 8)
+                                .frame(width: 240)
                             }
-                            .frame(width: 240)
                         }
                     }
                 }

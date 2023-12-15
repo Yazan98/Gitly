@@ -6,6 +6,9 @@ query GetStarredRepositoriesFirstPageQuery($id: String!) {
                 endCursor
             }
             nodes {
+            owner {
+                    login
+                }
                 id
                 name
                 description

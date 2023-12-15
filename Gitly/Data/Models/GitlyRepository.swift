@@ -10,6 +10,7 @@ import Foundation
 public struct GitlyRepository: Hashable, Identifiable {
     public var id: String
     let name: String
+    let ownerName: String
     let description: String
     let languageName: String
     let languageColor: String
