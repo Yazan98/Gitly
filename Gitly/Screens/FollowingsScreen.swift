@@ -16,5 +16,6 @@ struct FollowingsScreen: View {
         NavigationView {
             UsersScreenListView(followingType: type, userName: userId)
         }
+        .accentColor(.black)
     }
 }

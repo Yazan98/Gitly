@@ -80,8 +80,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
             endingLineNumber = "221"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getHeaderView(item:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "25E5BEBD-ED8B-4519-9110-9E6670547784 - 83e85dfe4e6de417"
@@ -128,8 +128,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "232"
             endingLineNumber = "232"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getHeaderView(item:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

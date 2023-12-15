@@ -1,0 +1,14 @@
+
+query GetOrganizationsByCurrentLoggedInUser($id: String!) {
+    user(login: $id) {
+        organizations(first: 40) {
+            nodes {
+                id
+                name
+                description
+                login
+                avatarUrl
+            }
+        }
+    }
+}

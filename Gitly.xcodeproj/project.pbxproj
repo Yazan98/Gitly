@@ -29,6 +29,11 @@
 		8AE42AB32B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AE42AB22B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql */; };
 		8AE42AB52B2BEC96003A7A75 /* StarredRepositoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AB42B2BEC96003A7A75 /* StarredRepositoriesListView.swift */; };
 		8AE42AB72B2C17EB003A7A75 /* RepositoryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AB62B2C17EB003A7A75 /* RepositoryScreenView.swift */; };
+		8AE42AB92B2C1AE6003A7A75 /* GetOrgsByCurrentUserQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AE42AB82B2C1AE6003A7A75 /* GetOrgsByCurrentUserQuery.graphql */; };
+		8AE42ABB2B2C1B19003A7A75 /* GitlyOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42ABA2B2C1B19003A7A75 /* GitlyOrg.swift */; };
+		8AE42ABD2B2C1B6F003A7A75 /* GitlyOrgsQueriesImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42ABC2B2C1B6F003A7A75 /* GitlyOrgsQueriesImplementation.swift */; };
+		8AE42AC02B2C1C9E003A7A75 /* UserOrgsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42ABF2B2C1C9E003A7A75 /* UserOrgsListView.swift */; };
+		8AE42AC22B2C1CC2003A7A75 /* OrgsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AC12B2C1CC2003A7A75 /* OrgsViewModel.swift */; };
 		8AEF3C052B265B0F005517AC /* GitlyApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */; };
 		8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */; };
 		8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C0C2B266448005517AC /* LoginScreen.swift */; };
@@ -103,6 +108,11 @@
 		8AE42AB22B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetStarredRepositoriesByPaginationHashQuery.graphql; sourceTree = "<group>"; };
 		8AE42AB42B2BEC96003A7A75 /* StarredRepositoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredRepositoriesListView.swift; sourceTree = "<group>"; };
 		8AE42AB62B2C17EB003A7A75 /* RepositoryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryScreenView.swift; sourceTree = "<group>"; };
+		8AE42AB82B2C1AE6003A7A75 /* GetOrgsByCurrentUserQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetOrgsByCurrentUserQuery.graphql; sourceTree = "<group>"; };
+		8AE42ABA2B2C1B19003A7A75 /* GitlyOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyOrg.swift; sourceTree = "<group>"; };
+		8AE42ABC2B2C1B6F003A7A75 /* GitlyOrgsQueriesImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyOrgsQueriesImplementation.swift; sourceTree = "<group>"; };
+		8AE42ABF2B2C1C9E003A7A75 /* UserOrgsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrgsListView.swift; sourceTree = "<group>"; };
+		8AE42AC12B2C1CC2003A7A75 /* OrgsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsViewModel.swift; sourceTree = "<group>"; };
 		8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyApiManager.swift; sourceTree = "<group>"; };
 		8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyStorageKeysManager.swift; sourceTree = "<group>"; };
 		8AEF3C0C2B266448005517AC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 				8AE42AA12B2BDDD8003A7A75 /* GetRepositoriesByPageHashQuery.graphql */,
 				8AE42AB02B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql */,
 				8AE42AB22B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql */,
+				8AE42AB82B2C1AE6003A7A75 /* GetOrgsByCurrentUserQuery.graphql */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -253,6 +264,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8AE42ABE2B2C1C90003A7A75 /* Orgs */ = {
+			isa = PBXGroup;
+			children = (
+				8AE42ABF2B2C1C9E003A7A75 /* UserOrgsListView.swift */,
+			);
+			path = Orgs;
+			sourceTree = "<group>";
+		};
 		8AEF3C012B265ABF005517AC /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +311,7 @@
 			children = (
 				8AEF3C132B26CC87005517AC /* GitlyUserQueriesImplementation.swift */,
 				8AEF3C2E2B26EADD005517AC /* GitlyRepositoriesQueriesImplementation.swift */,
+				8AE42ABC2B2C1B6F003A7A75 /* GitlyOrgsQueriesImplementation.swift */,
 			);
 			path = QueriesImplementation;
 			sourceTree = "<group>";
@@ -313,6 +333,7 @@
 				8AEF3C382B279132005517AC /* FollowingsViewModel.swift */,
 				8AE42A9D2B27AAAC003A7A75 /* RepositoriesViewModel.swift */,
 				8AE42AAE2B2BEB21003A7A75 /* StarredRepositoriesViewModel.swift */,
+				8AE42AC12B2C1CC2003A7A75 /* OrgsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -325,6 +346,7 @@
 				8AEF3C362B279104005517AC /* FollowingsType.swift */,
 				8AEF3C3A2B27914C005517AC /* UserEntity.swift */,
 				8AE42AA52B2BDE7E003A7A75 /* GitlyRepository.swift */,
+				8AE42ABA2B2C1B19003A7A75 /* GitlyOrg.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,6 +354,7 @@
 		8AEF3C1E2B26E50C005517AC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8AE42ABE2B2C1C90003A7A75 /* Orgs */,
 				8AE42A9A2B27AA87003A7A75 /* Repositories */,
 				8AEF3C472B279F28005517AC /* Users */,
 				8AEF3C1F2B26E512005517AC /* Home */,
@@ -482,6 +505,7 @@
 			files = (
 				8AEF3C3D2B2791EE005517AC /* GetFollowersByUserNameQuery.graphql in Resources */,
 				8AE42AB12B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql in Resources */,
+				8AE42AB92B2C1AE6003A7A75 /* GetOrgsByCurrentUserQuery.graphql in Resources */,
 				8AEF3C3F2B279308005517AC /* GetFollowingsByUserNameQuery.graphql in Resources */,
 				8AEF3C442B279C55005517AC /* GetFollowersFirstPageQuery.graphql in Resources */,
 				8A44AF482B26502100B03DDD /* PinnedRepositoriesQuery.graphql in Resources */,
@@ -548,6 +572,7 @@
 				8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */,
 				8AEF3C392B279132005517AC /* FollowingsViewModel.swift in Sources */,
 				8AEF3C312B26F849005517AC /* ProfileViewCell.swift in Sources */,
+				8AE42ABB2B2C1B19003A7A75 /* GitlyOrg.swift in Sources */,
 				8AE42AB52B2BEC96003A7A75 /* StarredRepositoriesListView.swift in Sources */,
 				8AEF3C252B26E556005517AC /* ExploreTabView.swift in Sources */,
 				8AEF3C372B279104005517AC /* FollowingsType.swift in Sources */,
@@ -555,6 +580,7 @@
 				8AEF3C212B26E542005517AC /* HomeTabView.swift in Sources */,
 				8AD606A12B2498840058E90A /* OnBoardingScreen.swift in Sources */,
 				8AEF3C232B26E54C005517AC /* NotificationsTabView.swift in Sources */,
+				8AE42AC02B2C1C9E003A7A75 /* UserOrgsListView.swift in Sources */,
 				8AE42A9C2B27AA94003A7A75 /* RepositoriesListView.swift in Sources */,
 				8AE42AAA2B2BE754003A7A75 /* RepositoryView.swift in Sources */,
 				8AEF3C162B26CEC1005517AC /* BannerModifier.swift in Sources */,
@@ -562,6 +588,7 @@
 				8AE42AB72B2C17EB003A7A75 /* RepositoryScreenView.swift in Sources */,
 				8AEF3C292B26E78C005517AC /* HomeScreenViewModel.swift in Sources */,
 				8AE42AA62B2BDE7E003A7A75 /* GitlyRepository.swift in Sources */,
+				8AE42ABD2B2C1B6F003A7A75 /* GitlyOrgsQueriesImplementation.swift in Sources */,
 				8AEF3C332B26FC55005517AC /* ImageView.swift in Sources */,
 				8AEF3C182B26D728005517AC /* HomeScreen.swift in Sources */,
 				8AE42A9E2B27AAAC003A7A75 /* RepositoriesViewModel.swift in Sources */,
@@ -573,6 +600,7 @@
 				8AEF3C142B26CC87005517AC /* GitlyUserQueriesImplementation.swift in Sources */,
 				8AE42AAD2B2BE8E0003A7A75 /* AppUtils.swift in Sources */,
 				8AD6069F2B2498840058E90A /* GitlyApp.swift in Sources */,
+				8AE42AC22B2C1CC2003A7A75 /* OrgsViewModel.swift in Sources */,
 				8AEF3C3B2B27914C005517AC /* UserEntity.swift in Sources */,
 				8AE42A992B27A725003A7A75 /* ProfileScreenView.swift in Sources */,
 				8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */,

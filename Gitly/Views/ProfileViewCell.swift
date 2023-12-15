@@ -139,7 +139,7 @@ struct ProfileViewCell: View {
         case .StarredRepositories:
              StarredRepositoriesListView(userId: userName)
         case .Organizations:
-             RepositoriesListView(userId: userName)
+             UserOrgsListView(userName: userName)
         }
     }
     
