@@ -126,14 +126,15 @@ struct ProfileViewCell: View {
         }
     }
     
+    @ViewBuilder
     private func getViewNavigationByType(itemType: ProfileNavigationItem, userName: String) -> some View {
         switch itemType {
         case .Repositories:
-            return RepositoriesListView(userId: userName)
+             RepositoriesListView(userId: userName)
         case .StarredRepositories:
-            return RepositoriesListView(userId: userName)
+             StarredRepositoriesListView(userId: userName)
         case .Organizations:
-            return RepositoriesListView(userId: userName)
+             RepositoriesListView(userId: userName)
         }
     }
     

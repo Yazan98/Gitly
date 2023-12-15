@@ -120,8 +120,86 @@ public final class GitlyRepositoriesQueriesImplementation: GitlyRepositoriesQuer
         }
     }
     
+    public func getStarredRepositoriesByUserName(
+        userName: String,
+        paginationHash: String,
+        onResponse: @escaping ([GitlyRepository], Bool, String) -> Void
+    ) {
+        DispatchQueue.global(qos: .background).async {
+            if paginationHash.isEmpty {
+                GitlyApiManager.shared.getApiInstance().fetch(
+                    query: GetStarredRepositoriesFirstPageQuery(id: userName)
+                ) { response in
+                    guard let data = try? response.get().data else { return }
+                    guard let repositoriesResponse = data.user else { return }
+                    var repositoriesResult: [GitlyRepository] = []
+                    repositoriesResponse.starredRepositories.nodes?.forEach { repository in
+                        repositoriesResult.append(self.getRepositoryItem(item: repository))
+                    }
+                    
+                    onResponse(
+                        repositoriesResult,
+                        repositoriesResponse.starredRepositories.pageInfo.hasNextPage ,
+                        repositoriesResponse.starredRepositories.pageInfo.endCursor ?? ""
+                    )
+                }
+                
+                return
+            }
+            
+            GitlyApiManager.shared.getApiInstance().fetch(
+                query: GetStarredRepositoriesByPaginationHashQuery(id: userName, pageHash: paginationHash)
+            ) { response in
+                guard let data = try? response.get().data else { return }
+                guard let repositoriesResponse = data.user else { return }
+                var repositoriesResult: [GitlyRepository] = []
+                repositoriesResponse.starredRepositories.nodes?.forEach { repository in
+                    repositoriesResult.append(self.getRepositoryItem(item: repository))
+                }
+                
+                onResponse(
+                    repositoriesResult,
+                    repositoriesResponse.starredRepositories.pageInfo.hasNextPage ,
+                    repositoriesResponse.starredRepositories.pageInfo.endCursor ?? ""
+                )
+            }
+        }
+    }
+    
     private func getRepositoryItem(
         item: GetFirstPageRepositoriesQuery.Data.User.Repositories.Node?
+    ) -> GitlyRepository {
+        return GitlyRepository(
+            id: item?.id ?? "",
+            name: item?.name ?? "",
+            description: item?.description ?? "",
+            languageName: item?.primaryLanguage?.name ?? "",
+            languageColor: item?.primaryLanguage?.color ?? "",
+            isPublic: item?.visibility.rawValue == "PUBLIC",
+            starsCount: item?.stargazerCount ?? 0,
+            forkCount: item?.forkCount ?? 0,
+            issuesCount: item?.issues.totalCount ?? 0
+        )
+    }
+    
+    private func getRepositoryItem(
+        item: GetStarredRepositoriesFirstPageQuery.Data.User.StarredRepositories.Node?
+    ) -> GitlyRepository {
+        return GitlyRepository(
+            id: item?.id ?? "",
+            name: item?.name ?? "",
+            description: item?.description ?? "",
+            languageName: item?.primaryLanguage?.name ?? "",
+            languageColor: item?.primaryLanguage?.color ?? "",
+            isPublic: item?.visibility.rawValue == "PUBLIC",
+            starsCount: item?.stargazerCount ?? 0,
+            forkCount: item?.forkCount ?? 0,
+            issuesCount: item?.issues.totalCount ?? 0
+        )
+    }
+    
+    private func getRepositoryItem(
+        item: GetStarredRepositoriesByPaginationHashQuery.Data.User.StarredRepositories.Node?
     ) -> GitlyRepository {
         return GitlyRepository(
             id: item?.id ?? "",

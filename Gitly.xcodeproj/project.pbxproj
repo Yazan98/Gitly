@@ -24,6 +24,10 @@
 		8AE42AA62B2BDE7E003A7A75 /* GitlyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AA52B2BDE7E003A7A75 /* GitlyRepository.swift */; };
 		8AE42AAA2B2BE754003A7A75 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AA92B2BE754003A7A75 /* RepositoryView.swift */; };
 		8AE42AAD2B2BE8E0003A7A75 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AAC2B2BE8E0003A7A75 /* AppUtils.swift */; };
+		8AE42AAF2B2BEB21003A7A75 /* StarredRepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AAE2B2BEB21003A7A75 /* StarredRepositoriesViewModel.swift */; };
+		8AE42AB12B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AE42AB02B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql */; };
+		8AE42AB32B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8AE42AB22B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql */; };
+		8AE42AB52B2BEC96003A7A75 /* StarredRepositoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE42AB42B2BEC96003A7A75 /* StarredRepositoriesListView.swift */; };
 		8AEF3C052B265B0F005517AC /* GitlyApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */; };
 		8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */; };
 		8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3C0C2B266448005517AC /* LoginScreen.swift */; };
@@ -93,6 +97,10 @@
 		8AE42AA52B2BDE7E003A7A75 /* GitlyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyRepository.swift; sourceTree = "<group>"; };
 		8AE42AA92B2BE754003A7A75 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		8AE42AAC2B2BE8E0003A7A75 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		8AE42AAE2B2BEB21003A7A75 /* StarredRepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredRepositoriesViewModel.swift; sourceTree = "<group>"; };
+		8AE42AB02B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetStarredRepositoriesFirstPageQuery.graphql; sourceTree = "<group>"; };
+		8AE42AB22B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetStarredRepositoriesByPaginationHashQuery.graphql; sourceTree = "<group>"; };
+		8AE42AB42B2BEC96003A7A75 /* StarredRepositoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredRepositoriesListView.swift; sourceTree = "<group>"; };
 		8AEF3C042B265B0F005517AC /* GitlyApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyApiManager.swift; sourceTree = "<group>"; };
 		8AEF3C082B265B3F005517AC /* GitlyStorageKeysManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitlyStorageKeysManager.swift; sourceTree = "<group>"; };
 		8AEF3C0C2B266448005517AC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -173,6 +181,8 @@
 				8AEF3C452B279CE4005517AC /* GetFollowingsFirstPageQuery.graphql */,
 				8AE42A9F2B2BDD1D003A7A75 /* GetFirstPageRepositoriesQuery.graphql */,
 				8AE42AA12B2BDDD8003A7A75 /* GetRepositoriesByPageHashQuery.graphql */,
+				8AE42AB02B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql */,
+				8AE42AB22B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -227,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				8AE42A9B2B27AA94003A7A75 /* RepositoriesListView.swift */,
+				8AE42AB42B2BEC96003A7A75 /* StarredRepositoriesListView.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 				8AEF3C2A2B26E797005517AC /* ProfileViewModel.swift */,
 				8AEF3C382B279132005517AC /* FollowingsViewModel.swift */,
 				8AE42A9D2B27AAAC003A7A75 /* RepositoriesViewModel.swift */,
+				8AE42AAE2B2BEB21003A7A75 /* StarredRepositoriesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -466,11 +478,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AEF3C3D2B2791EE005517AC /* GetFollowersByUserNameQuery.graphql in Resources */,
+				8AE42AB12B2BEB3C003A7A75 /* GetStarredRepositoriesFirstPageQuery.graphql in Resources */,
 				8AEF3C3F2B279308005517AC /* GetFollowingsByUserNameQuery.graphql in Resources */,
 				8AEF3C442B279C55005517AC /* GetFollowersFirstPageQuery.graphql in Resources */,
 				8A44AF482B26502100B03DDD /* PinnedRepositoriesQuery.graphql in Resources */,
 				8AD606A82B2498850058E90A /* Preview Assets.xcassets in Resources */,
 				8AD606E42B24AA2C0058E90A /* schema.json in Resources */,
+				8AE42AB32B2BEB6C003A7A75 /* GetStarredRepositoriesByPaginationHashQuery.graphql in Resources */,
 				8AD606A52B2498850058E90A /* Assets.xcassets in Resources */,
 				8AE42AA02B2BDD1D003A7A75 /* GetFirstPageRepositoriesQuery.graphql in Resources */,
 				8AEF3C462B279CE4005517AC /* GetFollowingsFirstPageQuery.graphql in Resources */,
@@ -531,6 +545,7 @@
 				8AEF3C092B265B3F005517AC /* GitlyStorageKeysManager.swift in Sources */,
 				8AEF3C392B279132005517AC /* FollowingsViewModel.swift in Sources */,
 				8AEF3C312B26F849005517AC /* ProfileViewCell.swift in Sources */,
+				8AE42AB52B2BEC96003A7A75 /* StarredRepositoriesListView.swift in Sources */,
 				8AEF3C252B26E556005517AC /* ExploreTabView.swift in Sources */,
 				8AEF3C372B279104005517AC /* FollowingsType.swift in Sources */,
 				8AEF3C122B26CC66005517AC /* AuthViewModel.swift in Sources */,
@@ -557,6 +572,7 @@
 				8AEF3C3B2B27914C005517AC /* UserEntity.swift in Sources */,
 				8AE42A992B27A725003A7A75 /* ProfileScreenView.swift in Sources */,
 				8AEF3C0D2B266448005517AC /* LoginScreen.swift in Sources */,
+				8AE42AAF2B2BEB21003A7A75 /* StarredRepositoriesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

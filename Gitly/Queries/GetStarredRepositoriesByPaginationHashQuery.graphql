@@ -1,0 +1,72 @@
+
+query GetStarredRepositoriesByPaginationHashQuery($id: String!, $pageHash: String!) {
+    user(login: $id) {
+        starredRepositories(first: 40, after: $pageHash) {
+            pageInfo {
+                hasNextPage
+                endCursor
+            }
+            nodes {
+                id
+                name
+                description
+                stargazerCount
+                forkCount
+                issues {
+                    totalCount
+                }
+                forkCount
+                forks {
+                    totalCount
+                    totalDiskUsage
+                }
+                defaultBranchRef {
+                    id
+                    name
+                }
+                isFork
+                primaryLanguage {
+                    color
+                    id
+                    name
+                }
+                stargazerCount
+                visibility
+                latestRelease {
+            createdAt
+            databaseId
+            description
+            descriptionHTML
+            id
+            isDraft
+            isLatest
+            isPrerelease
+            name
+            publishedAt
+            resourcePath
+            shortDescriptionHTML
+            tagName
+            updatedAt
+            url
+            viewerCanReact
+            author {
+                avatarUrl
+                bio
+                company
+                companyHTML
+                createdAt
+                email
+                id
+                isBountyHunter
+                location
+                login
+                name
+                url
+                websiteUrl
+            }
+        }
+            }
+        }
+    }
+}
+

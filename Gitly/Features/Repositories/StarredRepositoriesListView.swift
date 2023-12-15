@@ -1,15 +1,15 @@
 //
-//  RepositoriesListView.swift
+//  StarredRepositoriesListView.swift
 //  Gitly
 //
-//  Created by Yazan Tarifi on 11/12/2023.
+//  Created by Yazan Tarifi on 15/12/2023.
 //
 
 import SwiftUI
 
-struct RepositoriesListView: View {
+struct StarredRepositoriesListView: View {
     
-    @StateObject var viewModel: RepositoriesViewModel = RepositoriesViewModel()
+    @StateObject var viewModel: StarredRepositoriesViewModel = StarredRepositoriesViewModel()
     let userId: String
     
     var body: some View {
@@ -22,17 +22,17 @@ struct RepositoriesListView: View {
                         ForEach(Array(viewModel.repositoriesList.enumerated()), id: \.1) { index, repository in
                             RepositoryView(repository: repository)
                             .frame(maxWidth: .infinity)
-                            .padding()
                             .onAppear {
                                 viewModel.getNextPageByIndex(index: index)
                             }
+                            .padding()
                     
                         }
                     }
                 }
             }
         }
-        .navigationTitle("Repositories")
+        .navigationTitle("Starred Repositories")
         .navigationBarTitleDisplayMode(.large)
         .onAppear {
             viewModel.getScreenItems(userName: userId)
