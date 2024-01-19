@@ -51,3 +51,6 @@ apollo schema:download --header="Authorization: Bearer TOKEN" --endpoint https:/
 |  ![](https://github.com/Yazan98/Gitly/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.10.png?raw=true) | ![](https://github.com/Yazan98/Gitly/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.16.png?raw=true)  |  ![](https://github.com/Yazan98/Gitly/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.35.png?raw=true) |  ![](https://github.com/Yazan98/Gitly/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.57.png?raw=true) | ![](https://github.com/Yazan98/Gitly/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.48.19.png?raw=true)  |
 | ![](https://github.com/Yazan98/Gitly/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.48.27.png?raw=true)  | 
 
+## Project Video
+
+[Link](https://github.com/Yazan98/Gitly/raw/main/Screenshots/0119.mp4)
