@@ -1,12 +1,14 @@
 # Gitly
 IOS Application Based on Github GraphQL Api With SwiftUI
 
+![](https://github.com/Yazan98/Gitly/blob/main/Screenshots/Screenshot%202024-01-19%20at%202.04.59%E2%80%AFPM.png?raw=true)
+
 ## Description
 This Application Built to try GraphQl With Github Api to fetch data and Build Nested Navigations In the Application
 
 ## Commands
 1. To Pull the Schema and Save it in Json File
-2. 
+
 ```
 apollo schema:download --header="Authorization: Bearer TOKEN" --endpoint https://api.github.com/graphql schema.json
 ```
